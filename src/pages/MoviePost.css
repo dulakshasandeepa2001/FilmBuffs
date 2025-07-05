@@ -1,0 +1,586 @@
+.movie-post-page {
+  min-height: 100vh;
+  background: #1a1a1a;
+  padding: 40px 15px 30px;
+  color: white;
+}
+
+.movie-poster-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.movie-poster-image {
+  width: auto;
+  height: 550px;
+  max-width: 100%;
+  object-fit: contain;
+  background: #1a1a1a;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.movie-content {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.movie-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.movie-rating {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+}
+
+.download-section {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.download-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.trailer-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.trailer-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(45deg, #ff4757, #ff3742);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.trailer-btn:hover {
+  background: linear-gradient(45deg, #ff3742, #ff2731);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.watch-online-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.watch-online-btn:hover {
+  background: linear-gradient(45deg, #27ae60, #229954);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quality-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.quality-row h3 {
+  min-width: 80px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.format-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.download-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn.x264 {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+.download-btn.x265 {
+  background: linear-gradient(45deg, #2c3e50, #27ae60);
+}
+
+.download-btn.x264:hover {
+  background: linear-gradient(45deg, #3498db, #2c3e50);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 12px rgba(52, 152, 219, 0.3);
+}
+
+.download-btn.x265:hover {
+  background: linear-gradient(45deg, #27ae60, #2c3e50);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 12px rgba(39, 174, 96, 0.3);
+}
+
+.movie-info {
+  margin-top: 1.5rem;
+}
+
+.movie-info h2 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.movie-info p {
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.movie-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.detail-item .label {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.detail-item .value {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Download Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #222;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: popupSlideIn 0.3s ease;
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-header {
+  background: #333;
+  padding: 1.5rem;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+
+.popup-header h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.popup-body {
+  padding: 2rem;
+}
+
+.popup-body p {
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.download-hosts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.host-btn {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.host-btn.mega {
+  background: linear-gradient(45deg, #d74444, #c73e3e);
+  border: 1px solid #d74444;
+}
+
+.host-btn.fichier {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  border: 1px solid #3498db;
+}
+
+.host-btn.viking {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  border: 1px solid #9b59b6;
+}
+
+.host-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.host-btn.mega:hover {
+  box-shadow: 0 6px 20px rgba(215, 68, 68, 0.4);
+}
+
+.host-btn.fichier:hover {
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.host-btn.viking:hover {
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+}
+
+/* Server Button Styles */
+.server-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.server-btn {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.server-btn:hover {
+  background: linear-gradient(45deg, #2980b9, #1f5f99);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.server-click-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.popup-info {
+  padding: 0 2rem 2rem;
+  text-align: center;
+}
+
+.popup-info p {
+  color: #ddd;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.popup-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Main Download Button */
+.main-download-btn {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.main-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+  color: white;
+  text-decoration: none;
+}
+
+.download-info {
+  text-align: center;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.download-info p {
+  margin: 5px 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Download Options Styles */
+.download-options {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.download-options h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.quality-section {
+  margin-bottom: 2rem;
+}
+
+.quality-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.quality-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quality-btn {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(45deg, #6c5ce7, #5f3dc4);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-width: 140px;
+  text-align: center;
+}
+
+.quality-btn:hover {
+  background: linear-gradient(45deg, #5f3dc4, #4c63d2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+.click-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.instructions {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.instructions p {
+  color: #ffd700;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Mobile Responsiveness for Popup */
+@media (max-width: 768px) {
+  .popup-content {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .popup-header {
+    padding: 1rem;
+  }
+  
+  .popup-header h3 {
+    font-size: 1rem;
+  }
+  
+  .popup-body {
+    padding: 1.5rem;
+  }
+  
+  .download-hosts {
+    gap: 0.8rem;
+  }
+  
+  .host-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .movie-content {
+    padding: 1rem;
+  }
+
+  .movie-title {
+    font-size: 1.8rem;
+  }
+
+  .quality-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 0.6rem;
+  }
+
+  .quality-row h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .format-buttons {
+    flex-direction: column;
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .movie-details {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
