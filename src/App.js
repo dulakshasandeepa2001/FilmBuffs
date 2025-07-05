@@ -460,7 +460,10 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <Link to="/" className="logo" onClick={handleLogoClick}>Film Buffs</Link>
+        <Link to="/" className="logo" onClick={handleLogoClick}>
+          <img src="/FilmBuffs/public/logo112.png" alt="Film Buffs" className="logo-image" />
+          <span className="logo-text">Film Buffs</span>
+        </Link>
         <div className="nav-links">
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={handleNavClick}>Home</Link>
           <Link to="/action" className={`nav-link ${location.pathname === '/action' ? 'active' : ''}`} onClick={handleNavClick}>Action</Link>
