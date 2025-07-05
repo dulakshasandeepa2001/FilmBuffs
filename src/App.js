@@ -462,7 +462,7 @@ function App() {
       <nav className="navbar">
         <Link to="/" className="logo" onClick={handleLogoClick}>
           <img src="/FilmBuffs/public/logo112.png" className="logo-image" />
-          <span className="logo-text">Film Buffs</span>
+          
         </Link>
         <div className="nav-links">
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={handleNavClick}>Home</Link>
