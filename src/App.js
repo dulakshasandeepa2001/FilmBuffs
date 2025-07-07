@@ -15,6 +15,7 @@ import PoorThingsPost from './pages/movie-posts/PoorThings';
 import SquidGameSeason1Post from './pages/movie-posts/SquidGameSeason1';
 import SquidGameSeason2Post from './pages/movie-posts/SquidGameSeason2';
 import SquidGameSeason3Post from './pages/movie-posts/SquidGameSeason3';
+import BallerinPost from './pages/movie-posts/Ballerina';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -43,6 +44,14 @@ const handleFirstTimeClick = (e, buttonId) => {
 const movieData = {
   latest: [
     {
+      id: 16,
+      title: "Ballerina",
+      imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRh56p8pGOiRsnHtc1SZi5g8lbs7cedWGNpPtk8PzFpgsKqCiVHk1qHSAjBUiRPgTnrRohOs3EPGEiR8lcy0WjZOhqs8upsRa6kQzh3dlhylg",
+      rating: "6.2",
+      year: "2025",
+      description: "Taking place during the events of John Wick: Chapter 3 – Parabellum, Eve Macarro begins her training in the assassin traditions of the Ruska Roma. Years later, she's forced to use her skills to seek revenge against the crime syndicate that killed her family."
+    },
+    {
        
       id: 15,
       title: "Squid Game Season 3",
@@ -55,6 +64,14 @@ const movieData = {
     
   ],
   action: [
+    {
+      id: 16,
+      title: "Ballerina",
+      imageUrl: "https://m.media-amazon.com/images/M/MV5BNzE4ZjgxNjMtMmQ5ZS00NmU4LWE5ZDYtNGU5NzQzNzM1NzdjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      rating: "6.2",
+      year: "2025",
+      description: "Taking place during the events of John Wick: Chapter 3 – Parabellum, Eve Macarro begins her training in the assassin traditions of the Ruska Roma. Years later, she's forced to use her skills to seek revenge against the crime syndicate that killed her family."
+    },
     {
       id: 3,
       title: "The Batman",
@@ -241,6 +258,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'squid-game-season-2';
     } else if (urlTitle.includes('squid game season 3')) {
       urlTitle = 'squid-game-season-3';
+    } else if (urlTitle.includes('ballerina')) {
+      urlTitle = 'ballerina';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -460,7 +479,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-         <Link to="/" className="logo" onClick={handleLogoClick}>Film Buffs</Link>
+        <Link to="/" className="logo" onClick={handleLogoClick}>Film Buffs</Link>
         <div className="nav-links">
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={handleNavClick}>Home</Link>
           <Link to="/action" className={`nav-link ${location.pathname === '/action' ? 'active' : ''}`} onClick={handleNavClick}>Action</Link>
@@ -496,6 +515,7 @@ function App() {
         <Route path="/movies/squid-game-season-1" element={<SquidGameSeason1Post />} />
         <Route path="/movies/squid-game-season-2" element={<SquidGameSeason2Post />} />
         <Route path="/movies/squid-game-season-3" element={<SquidGameSeason3Post />} />
+        <Route path="/movies/ballerina" element={<BallerinPost />} />
       </Routes>
 
       <Footer />
