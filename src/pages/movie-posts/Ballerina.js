@@ -142,7 +142,7 @@ const BallerinaPost = () => {
             
             <div className="trailer-section">
               <a 
-                href="https://www.youtube.com/watch?v=FLZM3aYqXNI" 
+                href="https://www.youtube.com/watch?v=0FSwsrFpkbw&pp=ygUJYmFsbGVyaW5h" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="trailer-btn"
