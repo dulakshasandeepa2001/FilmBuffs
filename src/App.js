@@ -49,6 +49,7 @@ const movieData = {
       imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRh56p8pGOiRsnHtc1SZi5g8lbs7cedWGNpPtk8PzFpgsKqCiVHk1qHSAjBUiRPgTnrRohOs3EPGEiR8lcy0WjZOhqs8upsRa6kQzh3dlhylg",
       rating: "6.2",
       year: "2025",
+      watchUrl: "https://streamovie.xyz/en/movie/541671/ballerina",
       description: "Taking place during the events of John Wick: Chapter 3 – Parabellum, Eve Macarro begins her training in the assassin traditions of the Ruska Roma. Years later, she's forced to use her skills to seek revenge against the crime syndicate that killed her family."
     },
     {
@@ -70,6 +71,7 @@ const movieData = {
       imageUrl: "https://m.media-amazon.com/images/M/MV5BNzE4ZjgxNjMtMmQ5ZS00NmU4LWE5ZDYtNGU5NzQzNzM1NzdjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
       rating: "6.2",
       year: "2025",
+      watchUrl: "https://streamovie.xyz/en/movie/541671/ballerina",
       description: "Taking place during the events of John Wick: Chapter 3 – Parabellum, Eve Macarro begins her training in the assassin traditions of the Ruska Roma. Years later, she's forced to use her skills to seek revenge against the crime syndicate that killed her family."
     },
     {
@@ -273,7 +275,10 @@ const MovieCard = ({ movie }) => {
     if (handleFirstTimeClick(e, buttonId)) {
       return;
     }
-    // Normal watch online functionality will proceed
+    // Open the watch URL if available
+    if (movie.watchUrl) {
+      window.open(movie.watchUrl, '_blank');
+    }
   };
 
   const handleMovieCardClick = (e) => {
@@ -304,15 +309,17 @@ const MovieCard = ({ movie }) => {
           {isHovered && (
             <div className="movie-overlay">
               <div className="button-group">
-                <a 
-                  href={movie.watchUrl} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="watch-button"
-                  onClick={handleWatchOnline}
-                >
-                  Watch Online
-                </a>
+                {movie.watchUrl && (
+                  <a 
+                    href={movie.watchUrl} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="watch-button"
+                    onClick={handleWatchOnline}
+                  >
+                    Watch Online
+                  </a>
+                )}
                 <button className="download-button" onClick={handleDownload}>Download</button>
               </div>
             </div>
