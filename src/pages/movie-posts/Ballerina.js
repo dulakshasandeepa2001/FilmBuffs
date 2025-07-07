@@ -195,18 +195,12 @@ const BallerinaPost = () => {
                       onClick={() => handleQualityClick('480p x264')}
                     >
                       480p x264
-                      {clickCounts['480p x264'] && (
-                        <span className="click-count">({clickCounts['480p x264']}/5)</span>
-                      )}
                     </button>
                     <button 
                       className="quality-btn"
                       onClick={() => handleQualityClick('480p x265')}
                     >
                       480p x265
-                      {clickCounts['480p x265'] && (
-                        <span className="click-count">({clickCounts['480p x265']}/5)</span>
-                      )}
                     </button>
                   </div>
                 </div>
@@ -219,18 +213,12 @@ const BallerinaPost = () => {
                       onClick={() => handleQualityClick('720p x264')}
                     >
                       720p x264
-                      {clickCounts['720p x264'] && (
-                        <span className="click-count">({clickCounts['720p x264']}/5)</span>
-                      )}
                     </button>
                     <button 
                       className="quality-btn"
                       onClick={() => handleQualityClick('720p x265')}
                     >
                       720p x265
-                      {clickCounts['720p x265'] && (
-                        <span className="click-count">({clickCounts['720p x265']}/5)</span>
-                      )}
                     </button>
                   </div>
                 </div>
@@ -243,18 +231,12 @@ const BallerinaPost = () => {
                       onClick={() => handleQualityClick('1080p x264')}
                     >
                       1080p x264
-                      {clickCounts['1080p x264'] && (
-                        <span className="click-count">({clickCounts['1080p x264']}/5)</span>
-                      )}
                     </button>
                     <button 
                       className="quality-btn"
                       onClick={() => handleQualityClick('1080p x265')}
                     >
                       1080p x265
-                      {clickCounts['1080p x265'] && (
-                        <span className="click-count">({clickCounts['1080p x265']}/5)</span>
-                      )}
                     </button>
                   </div>
                 </div>
@@ -317,11 +299,6 @@ const BallerinaPost = () => {
                 onClick={() => handleServerClick('Server 1')}
               >
                 🚀 Server 1 - Ultra Fast
-                {serverClickCounts[`${currentQuality}-Server 1`] && (
-                  <span className="server-click-count">
-                    ({serverClickCounts[`${currentQuality}-Server 1`]}/5)
-                  </span>
-                )}
               </button>
               
               <button 
@@ -329,11 +306,6 @@ const BallerinaPost = () => {
                 onClick={() => handleServerClick('Server 2')}
               >
                 ⚡ Server 2 - High Speed
-                {serverClickCounts[`${currentQuality}-Server 2`] && (
-                  <span className="server-click-count">
-                    ({serverClickCounts[`${currentQuality}-Server 2`]}/5)
-                  </span>
-                )}
               </button>
               
               <button 
@@ -341,11 +313,6 @@ const BallerinaPost = () => {
                 onClick={() => handleServerClick('Server 3')}
               >
                 💎 Server 3 - Premium
-                {serverClickCounts[`${currentQuality}-Server 3`] && (
-                  <span className="server-click-count">
-                    ({serverClickCounts[`${currentQuality}-Server 3`]}/5)
-                  </span>
-                )}
               </button>
             </div>
             
