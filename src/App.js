@@ -16,6 +16,7 @@ import SquidGameSeason1Post from './pages/movie-posts/SquidGameSeason1';
 import SquidGameSeason2Post from './pages/movie-posts/SquidGameSeason2';
 import SquidGameSeason3Post from './pages/movie-posts/SquidGameSeason3';
 import BallerinPost from './pages/movie-posts/Ballerina';
+import IndependenceDayPost from './pages/movie-posts/IndependenceDay';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -51,6 +52,15 @@ const movieData = {
       year: "2025",
       watchUrl: "https://streamovie.xyz/en/movie/541671/ballerina",
       description: "Taking place during the events of John Wick: Chapter 3 – Parabellum, Eve Macarro begins her training in the assassin traditions of the Ruska Roma. Years later, she's forced to use her skills to seek revenge against the crime syndicate that killed her family."
+    },
+    {
+      id: 17,
+      title: "Independence Day",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgpf_kmbE2z20si8bOc1mY6_6uP-785cFHO4aihElaklDd-wVCwcnIQbJuJRD3Evu8CEQ8GJQetvjCqW8UASWKlVR3w0bfMCL1jBesFjhVSw",
+      rating: "7.0",
+      year: "1996",
+      watchUrl: "https://embedder.net/e/movie?tmdb=602&season=&episode=",
+      description: "Aliens attack Earth in this epic sci-fi blockbuster. On July 4th, humanity fights back against a massive alien invasion in this thrilling summer blockbuster."
     },
     {
        
@@ -158,6 +168,15 @@ const movieData = {
   ],
   scifi: [
     {
+      id: 17,
+      title: "Independence Day",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgpf_kmbE2z20si8bOc1mY6_6uP-785cFHO4aihElaklDd-wVCwcnIQbJuJRD3Evu8CEQ8GJQetvjCqW8UASWKlVR3w0bfMCL1jBesFjhVSw",
+      rating: "7.0",
+      year: "1996",
+      watchUrl: "https://embedder.net/e/movie?tmdb=602&season=&episode=",
+      description: "Aliens attack Earth in this epic sci-fi blockbuster. On July 4th, humanity fights back against a massive alien invasion in this thrilling summer blockbuster."
+    },
+    {
       id: 12,
       title: "Poor Things",
       imageUrl: "https://image.tmdb.org/t/p/w500/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
@@ -262,6 +281,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'squid-game-season-3';
     } else if (urlTitle.includes('ballerina')) {
       urlTitle = 'ballerina';
+    } else if (urlTitle.includes('independence day')) {
+      urlTitle = 'independence-day';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -523,6 +544,7 @@ function App() {
         <Route path="/movies/squid-game-season-2" element={<SquidGameSeason2Post />} />
         <Route path="/movies/squid-game-season-3" element={<SquidGameSeason3Post />} />
         <Route path="/movies/ballerina" element={<BallerinPost />} />
+        <Route path="/movies/independence-day" element={<IndependenceDayPost />} />
       </Routes>
 
       <Footer />
