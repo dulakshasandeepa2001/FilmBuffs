@@ -17,13 +17,14 @@ import SquidGameSeason2Post from './pages/movie-posts/SquidGameSeason2';
 import SquidGameSeason3Post from './pages/movie-posts/SquidGameSeason3';
 import BallerinPost from './pages/movie-posts/Ballerina';
 import IndependenceDayPost from './pages/movie-posts/IndependenceDay';
+import TangledPost from './pages/movie-posts/Tangled';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
   'https://incredibleenhancementslightning.com/mb44w5nrf?key=b81da213cd8d52d142d1bec92e3e014d',
   'https://incredibleenhancementslightning.com/d0jtntz4zi?key=b9a5ee9377f9a6709624ba8c106313f9',
   'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
-  'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b'
+  'https://otieu.com/4/9545201'
 ];
 
 // Global state for tracking individual button clicks
@@ -44,6 +45,15 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 18,
+      title: "Tangled",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a8/Tangled_poster.jpg",
+      rating: "7.7",
+      year: "2010",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=38757#",
+      description: "When the kingdom's most wanted—and most charming—bandit Flynn Rider hides out in a mysterious tower, he's taken hostage by Rapunzel, a beautiful and feisty tower-bound teen with 70 feet of magical, golden hair."
+    },
     {
       id: 16,
       title: "Ballerina",
@@ -116,6 +126,15 @@ const movieData = {
     }
   ],
   comedy: [
+    {
+      id: 18,
+      title: "Tangled",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a8/Tangled_poster.jpg",
+      rating: "7.7",
+      year: "2010",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=38757#",
+      description: "When the kingdom's most wanted—and most charming—bandit Flynn Rider hides out in a mysterious tower, he's taken hostage by Rapunzel, a beautiful and feisty tower-bound teen with 70 feet of magical, golden hair."
+    },
     {
       id: 7,
       title: "Barbie",
@@ -283,6 +302,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'ballerina';
     } else if (urlTitle.includes('independence day')) {
       urlTitle = 'independence-day';
+    } else if (urlTitle.includes('tangled')) {
+      urlTitle = 'tangled';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -545,6 +566,7 @@ function App() {
         <Route path="/movies/squid-game-season-3" element={<SquidGameSeason3Post />} />
         <Route path="/movies/ballerina" element={<BallerinPost />} />
         <Route path="/movies/independence-day" element={<IndependenceDayPost />} />
+        <Route path="/movies/tangled" element={<TangledPost />} />
       </Routes>
 
       <Footer />
