@@ -18,6 +18,7 @@ import SquidGameSeason3Post from './pages/movie-posts/SquidGameSeason3';
 import BallerinPost from './pages/movie-posts/Ballerina';
 import IndependenceDayPost from './pages/movie-posts/IndependenceDay';
 import TangledPost from './pages/movie-posts/Tangled';
+import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -53,6 +54,15 @@ const movieData = {
       year: "2010",
       watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=38757#",
       description: "When the kingdom's most wanted—and most charming—bandit Flynn Rider hides out in a mysterious tower, he's taken hostage by Rapunzel, a beautiful and feisty tower-bound teen with 70 feet of magical, golden hair."
+    },
+    {
+      id: 19,
+      title: "How to Train Your Dragon",
+      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1752688734/Untitled12222_fkn050.webp",
+      rating: "8.1",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=10191#",
+      description: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed."
     },
     {
       id: 16,
@@ -126,6 +136,15 @@ const movieData = {
     }
   ],
   comedy: [
+    {
+      id: 19,
+      title: "How to Train Your Dragon",
+      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1752688734/Untitled12222_fkn050.webp",
+      rating: "8.1",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=10191#",
+      description: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed."
+    },
     {
       id: 18,
       title: "Tangled",
@@ -304,6 +323,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'independence-day';
     } else if (urlTitle.includes('tangled')) {
       urlTitle = 'tangled';
+    } else if (urlTitle.includes('how to train your dragon')) {
+      urlTitle = 'how-to-train-your-dragon';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -567,6 +588,7 @@ function App() {
         <Route path="/movies/ballerina" element={<BallerinPost />} />
         <Route path="/movies/independence-day" element={<IndependenceDayPost />} />
         <Route path="/movies/tangled" element={<TangledPost />} />
+        <Route path="/movies/how-to-train-your-dragon" element={<HowToTrainYourDragonPost />} />
       </Routes>
 
       <Footer />
