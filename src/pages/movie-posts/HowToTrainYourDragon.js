@@ -218,21 +218,21 @@ const HowToTrainYourDragonPost = () => {
 
   // Download links for How to Train Your Dragon
   const downloadLinks = {
-    '480p x264-mega': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
+    '480p x264-mega': 'https://usersdrive.com/hqnpiprtunxv.html',
     '480p x264-viking': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '480p x264-gdrive': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '480p x265-mega': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '480p x265-viking': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '480p x265-gdrive': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
 
-    '720p x264-mega': 'https://mega.nz/file/DragonHD#VzfflWn9dKD51RTRjay4XIXi3wm5pNah2sf8jHARjx0',
+    '720p x264-mega': 'https://usersdrive.com/5ie1ad6s57gm.html',
     '720p x264-viking': 'https://ssn.techinmind.space/files/httyd2010720p',
     '720p x264-gdrive': 'https://ssn.techinmind.space/files/httyd2010720p',
     '720p x265-mega': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '720p x265-viking': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '720p x265-gdrive': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
 
-    '1080p x264-mega': 'https://mega.nz/file/DragonFHD#wrgc38OE-x3Ad7vszjZUVaj-cvK64jUN7aXTpPhwzEQ',
+    '1080p x264-mega': 'https://usersdrive.com/qgacr7fqmar0.html',
     '1080p x264-viking': 'https://ssn.techinmind.space/files/httyd20101080p',
     '1080p x264-gdrive': 'https://ssn.techinmind.space/files/httyd20101080p',
     '1080p x265-mega': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
