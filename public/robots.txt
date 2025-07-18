@@ -1,5 +1,6 @@
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://filmbuffsmovie.netlify.app/
+Allow: /
+
+Sitemap: https://filmbuffsmovie.netlify.app/sitemap.xml
+
 
