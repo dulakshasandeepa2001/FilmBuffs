@@ -19,6 +19,7 @@ import BallerinPost from './pages/movie-posts/Ballerina';
 import IndependenceDayPost from './pages/movie-posts/IndependenceDay';
 import TangledPost from './pages/movie-posts/Tangled';
 import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
+import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -46,6 +47,15 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 20,
+      title: "Karate Kid: Legends",
+      imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTmJdEbCp9aHzDuCNKNz8A-qQCMrv96Min6sXESoNOx1TAp3mKi&psig=AOvVaw1YG_c_uTJoPK8-SW00VTc7&ust=1753515234793000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsj7e_144DFQAAAAAdAAAAABAE",
+      rating: "7.5",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
+      description: "The latest installment in the beloved Karate Kid franchise brings together new and familiar faces in an epic martial arts adventure. A new generation learns the way of karate while honoring the legends who came before them."
+    },
     {
       id: 18,
       title: "Tangled",
@@ -96,6 +106,15 @@ const movieData = {
   ],
   action: [
     {
+      id: 20,
+      title: "Karate Kid: Legends",
+      imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTmJdEbCp9aHzDuCNKNz8A-qQCMrv96Min6sXESoNOx1TAp3mKi&psig=AOvVaw1YG_c_uTJoPK8-SW00VTc7&ust=1753515234793000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsj7e_144DFQAAAAAdAAAAABAE",
+      rating: "7.5",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
+      description: "The latest installment in the beloved Karate Kid franchise brings together new and familiar faces in an epic martial arts adventure. A new generation learns the way of karate while honoring the legends who came before them."
+    },
+    {
       id: 16,
       title: "Ballerina",
       imageUrl: "https://m.media-amazon.com/images/M/MV5BNzE4ZjgxNjMtMmQ5ZS00NmU4LWE5ZDYtNGU5NzQzNzM1NzdjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
@@ -141,7 +160,7 @@ const movieData = {
       title: "How to Train Your Dragon",
       imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1752688734/Untitled12222_fkn050.webp",
       rating: "8.1",
-      year: "2025",
+      year: "2010",
       watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=10191#",
       description: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed."
     },
@@ -325,6 +344,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'tangled';
     } else if (urlTitle.includes('how to train your dragon')) {
       urlTitle = 'how-to-train-your-dragon';
+    } else if (urlTitle.includes('karate kid: legends')) {
+      urlTitle = 'karate-kid-legends';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -589,6 +610,7 @@ function App() {
         <Route path="/movies/independence-day" element={<IndependenceDayPost />} />
         <Route path="/movies/tangled" element={<TangledPost />} />
         <Route path="/movies/how-to-train-your-dragon" element={<HowToTrainYourDragonPost />} />
+        <Route path="/movies/karate-kid-legends" element={<KarateKidLegendsPost />} />
       </Routes>
 
       <Footer />
