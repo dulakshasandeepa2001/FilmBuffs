@@ -53,7 +53,7 @@ const movieData = {
       imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTmJdEbCp9aHzDuCNKNz8A-qQCMrv96Min6sXESoNOx1TAp3mKi&psig=AOvVaw1YG_c_uTJoPK8-SW00VTc7&ust=1753515234793000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsj7e_144DFQAAAAAdAAAAABAE",
       rating: "7.5",
       year: "2025",
-      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=1011477#",
       description: "The latest installment in the beloved Karate Kid franchise brings together new and familiar faces in an epic martial arts adventure. A new generation learns the way of karate while honoring the legends who came before them."
     },
     {
@@ -111,7 +111,7 @@ const movieData = {
       imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTmJdEbCp9aHzDuCNKNz8A-qQCMrv96Min6sXESoNOx1TAp3mKi&psig=AOvVaw1YG_c_uTJoPK8-SW00VTc7&ust=1753515234793000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsj7e_144DFQAAAAAdAAAAABAE",
       rating: "7.5",
       year: "2025",
-      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=1011477#",
       description: "The latest installment in the beloved Karate Kid franchise brings together new and familiar faces in an epic martial arts adventure. A new generation learns the way of karate while honoring the legends who came before them."
     },
     {
