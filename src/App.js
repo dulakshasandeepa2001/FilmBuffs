@@ -20,6 +20,7 @@ import IndependenceDayPost from './pages/movie-posts/IndependenceDay';
 import TangledPost from './pages/movie-posts/Tangled';
 import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
 import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
+import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -48,12 +49,21 @@ const handleFirstTimeClick = (e, buttonId) => {
 const movieData = {
   latest: [
     {
+      id: 21,
+      title: "28 Years Later",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR52mCisDohLeTVzvyFcx_elHY3I4lzMhJLUfHsyoMnt3vIpjTs",
+      rating: "8.2",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=28YearsLater2025#",
+      description: "The highly anticipated third installment in the acclaimed zombie apocalypse franchise. Set 28 years after the original outbreak, a new generation faces the evolved infected in a world forever changed by the rage virus."
+    },
+    {
       id: 20,
       title: "Karate Kid: Legends",
-      imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTmJdEbCp9aHzDuCNKNz8A-qQCMrv96Min6sXESoNOx1TAp3mKi&psig=AOvVaw1YG_c_uTJoPK8-SW00VTc7&ust=1753515234793000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsj7e_144DFQAAAAAdAAAAABAE",
+      imageUrl: "https://image.tmdb.org/t/p/w500/karate-kid-legends-poster.jpg",
       rating: "7.5",
       year: "2025",
-      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=1011477#",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
       description: "The latest installment in the beloved Karate Kid franchise brings together new and familiar faces in an epic martial arts adventure. A new generation learns the way of karate while honoring the legends who came before them."
     },
     {
@@ -108,10 +118,10 @@ const movieData = {
     {
       id: 20,
       title: "Karate Kid: Legends",
-      imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTmJdEbCp9aHzDuCNKNz8A-qQCMrv96Min6sXESoNOx1TAp3mKi&psig=AOvVaw1YG_c_uTJoPK8-SW00VTc7&ust=1753515234793000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsj7e_144DFQAAAAAdAAAAABAE",
+      imageUrl: "https://image.tmdb.org/t/p/w500/karate-kid-legends-poster.jpg",
       rating: "7.5",
       year: "2025",
-      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=1011477#",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
       description: "The latest installment in the beloved Karate Kid franchise brings together new and familiar faces in an epic martial arts adventure. A new generation learns the way of karate while honoring the legends who came before them."
     },
     {
@@ -139,6 +149,15 @@ const movieData = {
     }
   ],
   horror: [
+    {
+      id: 21,
+      title: "28 Years Later",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR52mCisDohLeTVzvyFcx_elHY3I4lzMhJLUfHsyoMnt3vIpjTs",
+      rating: "8.2",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=28YearsLater2025#",
+      description: "The highly anticipated third installment in the acclaimed zombie apocalypse franchise. Set 28 years after the original outbreak, a new generation faces the evolved infected in a world forever changed by the rage virus."
+    },
     {
       id: 5,
       title: "Talk to Me",
@@ -346,6 +365,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'how-to-train-your-dragon';
     } else if (urlTitle.includes('karate kid: legends')) {
       urlTitle = 'karate-kid-legends';
+    } else if (urlTitle.includes('28 years later')) {
+      urlTitle = '28-years-later';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -611,6 +632,7 @@ function App() {
         <Route path="/movies/tangled" element={<TangledPost />} />
         <Route path="/movies/how-to-train-your-dragon" element={<HowToTrainYourDragonPost />} />
         <Route path="/movies/karate-kid-legends" element={<KarateKidLegendsPost />} />
+        <Route path="/movies/28-years-later" element={<TwentyEightYearsLaterPost />} />
       </Routes>
 
       <Footer />
