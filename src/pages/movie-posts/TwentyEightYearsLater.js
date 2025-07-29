@@ -225,17 +225,17 @@ const TwentyEightYearsLaterPost = () => {
     '480p x265-gdrive': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
 
     '720p x264-mega': 'https://mega.nz/file/28YearsLaterHD#VzfflWn9dKD51RTRjay4XIXi3wm5pNah2sf8jHARjx0',
-    '720p x264-viking': 'https://ssn.techinmind.space/files/28yearslater2025720p',
-    '720p x264-gdrive': 'https://ssn.techinmind.space/files/28yearslater2025720p',
+    '720p x264-viking': 'https://gdlink.dev/file/IN2P5YXVlfcWPdE',
+    '720p x264-gdrive': 'https://new21.gdtot.dad/file/935786257',
     '720p x265-mega': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '720p x265-viking': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
     '720p x265-gdrive': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
 
-    '1080p x264-mega': 'https://mega.nz/file/28YearsLaterFHD#wrgc38OE-x3Ad7vszjZUVaj-cvK64jUN7aXTpPhwzEQ',
-    '1080p x264-viking': 'https://ssn.techinmind.space/files/28yearslater20251080p',
-    '1080p x264-gdrive': 'https://ssn.techinmind.space/files/28yearslater20251080p',
+    '1080p x264-mega': 'https://gdlink.dev/file/Q54tFdc0IJRUH76',
+    '1080p x264-viking': 'https://new21.gdtot.dad/file/3812711415',
+    '1080p x264-gdrive': 'https://new21.gdtot.dad/file/6887307381',
     '1080p x265-mega': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
-    '1080p x265-viking': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
+    '1080p x265-viking': 'https://hubcloud.one/video/1ylc10byyxnr18v',
     '1080p x265-gdrive': 'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b',
   };
 
