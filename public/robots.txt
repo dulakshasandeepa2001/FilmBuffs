@@ -1,25 +1,7 @@
 User-agent: *
+Disallow: /search
+Disallow: /category/
+Disallow: /tag/
 Allow: /
-
-# Sitemap location
 Sitemap: https://filmbuffs.click/sitemap.xml
-
-# Crawl-delay (optional - helps with server load)
-Crawl-delay: 1
-
-# Disallow specific paths if needed (uncomment as required)
-# Disallow: /admin/
-# Disallow: /private/
-# Disallow: /temp/
-# Disallow: /*.json$
-# Disallow: /api/
-
-# Allow specific bots
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
+Sitemap: https://filmbuffs.click/sitemap-pages.xml
