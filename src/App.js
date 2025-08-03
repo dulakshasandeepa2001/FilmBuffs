@@ -51,6 +51,15 @@ const handleFirstTimeClick = (e, buttonId) => {
 const movieData = {
   latest: [
     {
+      id: 23,
+      title: "Eyes of Wakanda Season 1",
+      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1754124989/images_4_li0lmi.jpg",
+      rating: "8.5",
+      year: "2025",
+      watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=eyes-of-wakanda&season=1#",
+      description: "Marvel Animation's new action-adventure series follows the adventures of brave Wakandan warriors throughout history. In this globe-trotting adventure, the heroes must carry-out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story."
+    },
+    {
       id: 21,
       title: "28 Years Later",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR52mCisDohLeTVzvyFcx_elHY3I4lzMhJLUfHsyoMnt3vIpjTs",
