@@ -247,15 +247,7 @@ const movieData = {
       watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=eyes-of-wakanda&season=1#",
       description: "Marvel Animation's new action-adventure series follows the adventures of brave Wakandan warriors throughout history. In this globe-trotting adventure, the heroes must carry-out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story."
     },
-    {
-      id: 22,
-      title: "Game of Thrones Season 1",
-      imageUrl: "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
-      rating: "9.3",
-      year: "2011",
-      watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=1399&season=1#",
-      description: "The epic fantasy saga begins! Follow the battle for the Iron Throne in the Seven Kingdoms as noble families fight for power, while an ancient evil awakens in the far north. Winter is coming."
-    },
+    
     {
       id: 13,
       title: "Squid Game Season 1",
@@ -696,7 +688,6 @@ function App() {
         <Route path="/movies/how-to-train-your-dragon" element={<HowToTrainYourDragonPost />} />
         <Route path="/movies/karate-kid-legends" element={<KarateKidLegendsPost />} />
         <Route path="/movies/28-years-later" element={<TwentyEightYearsLaterPost />} />
-        <Route path="/movies/game-of-thrones-season-1" element={<GameOfThronesS1Post />} />
         <Route path="/movies/eyes-of-wakanda-season-1" element={<EyesOfWakandaS1Post />} />
         <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
       </Routes>
