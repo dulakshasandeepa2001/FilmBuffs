@@ -21,7 +21,7 @@ import TangledPost from './pages/movie-posts/Tangled';
 import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
 import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
 import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater';
-import GameOfThronesS1Post from './pages/movie-posts/GameOfThronesS1';
+
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
 
