@@ -21,8 +21,9 @@ import TangledPost from './pages/movie-posts/Tangled';
 import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
 import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
 import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater';
-
+import GameOfThronesS1Post from './pages/movie-posts/GameOfThronesS1';
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
+import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -50,6 +51,15 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 24,
+      title: "Jurassic World Rebirth",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSQ_mCeNLtPfEM8AbIDVZUyVyuu_JENshYBugD_JPNjI9vrBWRA",
+      rating: "7.2",
+      year: "2025",
+      watchUrl: "https://streamovie.xyz/assets/v1/video/movie.mp4",
+      description: "A profit-driven pharmaceutical company assembles a team to retrieve blood samples from the world's last prehistoric giants. Their mission leads them to a forbidden island overrun by engineered hybrids that can run, swim, glide, and soar."
+    },
     {
       id: 23,
       title: "Eyes of Wakanda Season 1",
@@ -126,6 +136,15 @@ const movieData = {
     
   ],
   action: [
+    {
+      id: 24,
+      title: "Jurassic World Rebirth",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSQ_mCeNLtPfEM8AbIDVZUyVyuu_JENshYBugD_JPNjI9vrBWRA",
+      rating: "7.2",
+      year: "2025",
+      watchUrl: "https://streamovie.xyz/assets/v1/video/movie.mp4",
+      description: "A profit-driven pharmaceutical company assembles a team to retrieve blood samples from the world's last prehistoric giants. Their mission leads them to a forbidden island overrun by engineered hybrids that can run, swim, glide, and soar."
+    },
     {
       id: 20,
       title: "Karate Kid: Legends",
@@ -222,13 +241,21 @@ const movieData = {
     {
       id: 23,
       title: "Eyes of Wakanda Season 1",
-      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1754124989/images_4_li0lmi.jpg",
+      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1754388793/WhatsApp_Image_2025-08-04_at_17.30.01_71185a8c_gxcrkc.jpg",
       rating: "8.5",
       year: "2025",
       watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=eyes-of-wakanda&season=1#",
       description: "Marvel Animation's new action-adventure series follows the adventures of brave Wakandan warriors throughout history. In this globe-trotting adventure, the heroes must carry-out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story."
     },
-    
+    {
+      id: 22,
+      title: "Game of Thrones Season 1",
+      imageUrl: "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+      rating: "9.3",
+      year: "2011",
+      watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=1399&season=1#",
+      description: "The epic fantasy saga begins! Follow the battle for the Iron Throne in the Seven Kingdoms as noble families fight for power, while an ancient evil awakens in the far north. Winter is coming."
+    },
     {
       id: 13,
       title: "Squid Game Season 1",
@@ -264,6 +291,15 @@ const movieData = {
     }
   ],
   scifi: [
+    {
+      id: 24,
+      title: "Jurassic World Rebirth",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSQ_mCeNLtPfEM8AbIDVZUyVyuu_JENshYBugD_JPNjI9vrBWRA",
+      rating: "7.2",
+      year: "2025",
+      watchUrl: "https://streamovie.xyz/assets/v1/video/movie.mp4",
+      description: "A profit-driven pharmaceutical company assembles a team to retrieve blood samples from the world's last prehistoric giants. Their mission leads them to a forbidden island overrun by engineered hybrids that can run, swim, glide, and soar."
+    },
     {
       id: 17,
       title: "Independence Day",
@@ -388,8 +424,12 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'karate-kid-legends';
     } else if (urlTitle.includes('28 years later')) {
       urlTitle = '28-years-later';
+    } else if (urlTitle.includes('game of thrones season 1')) {
+      urlTitle = 'game-of-thrones-season-1';
     } else if (urlTitle.includes('eyes of wakanda season 1')) {
       urlTitle = 'eyes-of-wakanda-season-1';
+    } else if (urlTitle.includes('jurassic world rebirth')) {
+      urlTitle = 'jurassic-world-rebirth';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -656,7 +696,9 @@ function App() {
         <Route path="/movies/how-to-train-your-dragon" element={<HowToTrainYourDragonPost />} />
         <Route path="/movies/karate-kid-legends" element={<KarateKidLegendsPost />} />
         <Route path="/movies/28-years-later" element={<TwentyEightYearsLaterPost />} />
+        <Route path="/movies/game-of-thrones-season-1" element={<GameOfThronesS1Post />} />
         <Route path="/movies/eyes-of-wakanda-season-1" element={<EyesOfWakandaS1Post />} />
+        <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
       </Routes>
 
       <Footer />
