@@ -56,7 +56,7 @@ const movieData = {
     {
       id: 26,
       title: "The Pickup",
-      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT ",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
       rating: "7.2",
       year: "2025",
       watchUrl: "https://streamovie.xyz/en/movie/the-pickup-2025",
@@ -226,7 +226,7 @@ const movieData = {
     {
       id: 26,
       title: "The Pickup",
-      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT ",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
       rating: "7.2",
       year: "2025",
       watchUrl: "https://streamovie.xyz/en/movie/the-pickup-2025",

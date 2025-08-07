@@ -91,7 +91,7 @@ const ThePickupPost = () => {
 
     setOrCreateOGMeta('og:title', 'The Pickup (2025) Full Movie Download & Watch Online');
     setOrCreateOGMeta('og:description', 'A hilarious comedy heist film about an unlikely crew pulling off the perfect crime. Watch as ordinary people attempt an extraordinary heist with unexpected results.');
-    setOrCreateOGMeta('og:image', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel');
+    setOrCreateOGMeta('og:image', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT');
     setOrCreateOGMeta('og:image:width', '1200');
     setOrCreateOGMeta('og:image:height', '630');
     setOrCreateOGMeta('og:image:alt', 'The Pickup 2025 movie poster');
@@ -116,7 +116,7 @@ const ThePickupPost = () => {
     setOrCreateTwitterMeta('twitter:card', 'summary_large_image');
     setOrCreateTwitterMeta('twitter:title', 'The Pickup (2025) Full Movie Download & Watch Online');
     setOrCreateTwitterMeta('twitter:description', 'A hilarious comedy heist film about an unlikely crew pulling off the perfect crime.');
-    setOrCreateTwitterMeta('twitter:image', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel');
+    setOrCreateTwitterMeta('twitter:image', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT');
     setOrCreateTwitterMeta('twitter:image:alt', 'The Pickup 2025 movie poster');
 
     // Add JSON-LD structured data
@@ -126,7 +126,7 @@ const ThePickupPost = () => {
       "name": "The Pickup",
       "alternateName": "The Pickup 2025",
       "description": "A hilarious comedy heist film about an unlikely crew pulling off the perfect crime. When a group of ordinary people decide to attempt an extraordinary heist, they discover that stealing isn't as easy as it looks in the movies. This action-packed comedy combines clever writing with unexpected twists.",
-      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT",
       "genre": ["Comedy", "Heist", "Action", "Crime"],
       "contentRating": "R",
       "duration": "PT1H34M",
@@ -154,7 +154,7 @@ const ThePickupPost = () => {
         "@type": "VideoObject",
         "name": "The Pickup Official Trailer",
         "description": "Watch the official trailer for The Pickup (2025)",
-        "thumbnailUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
+        "thumbnailUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT",
         "uploadDate": "2025-01-01"
       },
       "offers": {
@@ -242,7 +242,7 @@ const ThePickupPost = () => {
     <div className="movie-post-page">
       <div className="movie-poster-container">
         <img 
-          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel" 
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KT" 
           alt="The Pickup 2025 movie poster" 
           className="movie-poster-image" 
           title="The Pickup (2025) - Official Movie Poster"
