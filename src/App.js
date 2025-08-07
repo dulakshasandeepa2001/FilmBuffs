@@ -24,6 +24,7 @@ import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater
 
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
+import WednesdaySeason2Post from './pages/movie-posts/WednesdaySeason2';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -52,6 +53,14 @@ const handleFirstTimeClick = (e, buttonId) => {
 const movieData = {
   latest: [
     {
+      id: 25,
+      title: "Wednesday Season 2",
+      imageUrl: "https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
+      rating: "8.7",
+      year: "2025",
+      description: "Wednesday Addams returns for her sophomore year at Nevermore Academy. As she navigates new mysteries, supernatural threats, and complex relationships, the iconic goth teenager must master her emerging psychic abilities while uncovering dark secrets that threaten both the school and her family legacy."
+    },
+    {
       id: 24,
       title: "Jurassic World Rebirth",
       imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSQ_mCeNLtPfEM8AbIDVZUyVyuu_JENshYBugD_JPNjI9vrBWRA",
@@ -66,7 +75,6 @@ const movieData = {
       imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1754124989/images_4_li0lmi.jpg",
       rating: "8.5",
       year: "2025",
-      watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=eyes-of-wakanda&season=1#",
       description: "Marvel Animation's new action-adventure series follows the adventures of brave Wakandan warriors throughout history. In this globe-trotting adventure, the heroes must carry-out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story."
     },
     {
@@ -79,9 +87,9 @@ const movieData = {
       description: "The highly anticipated third installment in the acclaimed zombie apocalypse franchise. Set 28 years after the original outbreak, a new generation faces the evolved infected in a world forever changed by the rage virus."
     },
     {
-      id: 20,
+      id: 20, 
       title: "Karate Kid: Legends",
-      imageUrl: "https://image.tmdb.org/t/p/w500/karate-kid-legends-poster.jpg",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTLrkP1ycW19vMwYgQnsDpCNo3kd2OBpZSwaIdAVNnz6zvG9Digr3pDpE7p2DMkrLB000LUAa4mVBW_rR7JqN5Z8M9JovQiSMI2IZ3TqRY",
       rating: "7.5",
       year: "2025",
       watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
@@ -148,7 +156,7 @@ const movieData = {
     {
       id: 20,
       title: "Karate Kid: Legends",
-      imageUrl: "https://image.tmdb.org/t/p/w500/karate-kid-legends-poster.jpg",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTLrkP1ycW19vMwYgQnsDpCNo3kd2OBpZSwaIdAVNnz6zvG9Digr3pDpE7p2DMkrLB000LUAa4mVBW_rR7JqN5Z8M9JovQiSMI2IZ3TqRY",
       rating: "7.5",
       year: "2025",
       watchUrl: "https://stream.techinmind.space/movlinks.php?tmdbid=karateKid2025#",
@@ -157,7 +165,8 @@ const movieData = {
     {
       id: 16,
       title: "Ballerina",
-      imageUrl: "https://m.media-amazon.com/images/M/MV5BNzE4ZjgxNjMtMmQ5ZS00NmU4LWE5ZDYtNGU5NzQzNzM1NzdjXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRh56p8pGOiRsnHtc1SZi5g8lbs7cedWGNpPtk8PzFpgsKqCiVHk1qHSAjBUiRPgTnrRohOs3EPGEiR8lcy0WjZOhqs8upsRa6kQzh3dlhylg",
+      
       rating: "6.2",
       year: "2025",
       watchUrl: "https://streamovie.xyz/en/movie/541671/ballerina",
@@ -239,12 +248,19 @@ const movieData = {
   ],
   drama: [
     {
+      id: 25,
+      title: "Wednesday Season 2",
+      imageUrl: "https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
+      rating: "8.7",
+      year: "2025",
+      description: "Wednesday Addams returns for her sophomore year at Nevermore Academy. As she navigates new mysteries, supernatural threats, and complex relationships, the iconic goth teenager must master her emerging psychic abilities while uncovering dark secrets that threaten both the school and her family legacy."
+    },
+    {
       id: 23,
       title: "Eyes of Wakanda Season 1",
-      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1754388793/WhatsApp_Image_2025-08-04_at_17.30.01_71185a8c_gxcrkc.jpg",
+      imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1754124989/images_4_li0lmi.jpg",
       rating: "8.5",
       year: "2025",
-      watchUrl: "https://stream.techinmind.space/tvlinks.php?tmdbid=eyes-of-wakanda&season=1#",
       description: "Marvel Animation's new action-adventure series follows the adventures of brave Wakandan warriors throughout history. In this globe-trotting adventure, the heroes must carry-out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story."
     },
     
@@ -420,6 +436,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'game-of-thrones-season-1';
     } else if (urlTitle.includes('eyes of wakanda season 1')) {
       urlTitle = 'eyes-of-wakanda-season-1';
+    } else if (urlTitle.includes('wednesday season 2')) {
+      urlTitle = 'wednesday-season-2';
     } else if (urlTitle.includes('jurassic world rebirth')) {
       urlTitle = 'jurassic-world-rebirth';
     } else {
@@ -689,6 +707,7 @@ function App() {
         <Route path="/movies/karate-kid-legends" element={<KarateKidLegendsPost />} />
         <Route path="/movies/28-years-later" element={<TwentyEightYearsLaterPost />} />
         <Route path="/movies/eyes-of-wakanda-season-1" element={<EyesOfWakandaS1Post />} />
+        <Route path="/movies/wednesday-season-2" element={<WednesdaySeason2Post />} />
         <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
       </Routes>
 
