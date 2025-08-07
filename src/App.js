@@ -59,6 +59,7 @@ const movieData = {
       imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
       rating: "7.2",
       year: "2025",
+      watchUrl: "https://streamovie.xyz/en/movie/the-pickup-2025",
       description: "A hilarious comedy heist film about an unlikely crew pulling off the perfect crime. When a group of ordinary people decide to attempt an extraordinary heist, they discover that stealing isn't as easy as it looks in the movies."
     },
     {
@@ -228,6 +229,7 @@ const movieData = {
       imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
       rating: "7.2",
       year: "2025",
+      watchUrl: "https://streamovie.xyz/en/movie/the-pickup-2025",
       description: "A hilarious comedy heist film about an unlikely crew pulling off the perfect crime. When a group of ordinary people decide to attempt an extraordinary heist, they discover that stealing isn't as easy as it looks in the movies."
     },
     {
