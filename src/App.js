@@ -25,6 +25,7 @@ import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
 import WednesdaySeason2Post from './pages/movie-posts/WednesdaySeason2';
+import ThePickupPost from './pages/movie-posts/ThePickup';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -52,6 +53,14 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 26,
+      title: "The Pickup",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
+      rating: "7.2",
+      year: "2025",
+      description: "A hilarious comedy heist film about an unlikely crew pulling off the perfect crime. When a group of ordinary people decide to attempt an extraordinary heist, they discover that stealing isn't as easy as it looks in the movies."
+    },
     {
       id: 25,
       title: "Wednesday Season 2",
@@ -213,6 +222,14 @@ const movieData = {
     }
   ],
   comedy: [
+    {
+      id: 26,
+      title: "The Pickup",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSosgeC462Ds54wCyynZPrAlSillruysuUNUQO_py7dW-7D16KTmobitel",
+      rating: "7.2",
+      year: "2025",
+      description: "A hilarious comedy heist film about an unlikely crew pulling off the perfect crime. When a group of ordinary people decide to attempt an extraordinary heist, they discover that stealing isn't as easy as it looks in the movies."
+    },
     {
       id: 19,
       title: "How to Train Your Dragon",
@@ -440,6 +457,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'wednesday-season-2';
     } else if (urlTitle.includes('jurassic world rebirth')) {
       urlTitle = 'jurassic-world-rebirth';
+    } else if (urlTitle.includes('the pickup')) {
+      urlTitle = 'the-pickup';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -709,6 +728,7 @@ function App() {
         <Route path="/movies/eyes-of-wakanda-season-1" element={<EyesOfWakandaS1Post />} />
         <Route path="/movies/wednesday-season-2" element={<WednesdaySeason2Post />} />
         <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
+        <Route path="/movies/the-pickup" element={<ThePickupPost />} />
       </Routes>
 
       <Footer />
