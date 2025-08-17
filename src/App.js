@@ -26,6 +26,7 @@ import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
 import WednesdaySeason2Post from './pages/movie-posts/WednesdaySeason2';
 import ThePickupPost from './pages/movie-posts/ThePickup';
+import Superman2025Post from './pages/movie-posts/Superman2025';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -53,6 +54,15 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+      {
+        id: 27,
+        title: "Superman",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png",
+        rating: "8.4",
+        year: "2025",
+        watchUrl: "#",
+        description: "The legendary superhero returns in an epic action/sci-fi adventure. Superman faces new threats to Earth and must balance his human identity with his superhuman responsibilities."
+      },
     {
       id: 26,
       title: "The Pickup",
@@ -319,6 +329,15 @@ const movieData = {
   ],
   scifi: [
     {
+      id: 27,
+      title: "Superman",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png",
+      rating: "8.4",
+      year: "2025",
+      watchUrl: "#",
+      description: "The legendary superhero returns in an epic action/sci-fi adventure. Superman faces new threats to Earth and must balance his human identity with his superhuman responsibilities."
+    },
+    {
       id: 24,
       title: "Jurassic World Rebirth",
       imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSQ_mCeNLtPfEM8AbIDVZUyVyuu_JENshYBugD_JPNjI9vrBWRA",
@@ -461,6 +480,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'jurassic-world-rebirth';
     } else if (urlTitle.includes('the pickup')) {
       urlTitle = 'the-pickup';
+    } else if (urlTitle.includes('superman')) {
+      urlTitle = 'superman-2025';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -730,6 +751,7 @@ function App() {
         <Route path="/movies/eyes-of-wakanda-season-1" element={<EyesOfWakandaS1Post />} />
         <Route path="/movies/wednesday-season-2" element={<WednesdaySeason2Post />} />
         <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
+  <Route path="/movies/superman-2025" element={<Superman2025Post />} />
         <Route path="/movies/the-pickup" element={<ThePickupPost />} />
       </Routes>
 
