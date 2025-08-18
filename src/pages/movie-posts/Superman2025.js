@@ -174,11 +174,13 @@ const Superman2025Post = () => {
     'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
     'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b'
   ];
-  // Download links (placeholder)
+  // Download links
   const downloadLinks = {
-    '720p WEB-DL': '#',
-    '1080p WEB-DL': '#',
-    '4K UHD WEB-DL': '#'
+    '720p × 264': 'https://usersdrive.com/x70p8bmggyms.html',
+    '720p 10Bit (Hindi + English)': 'https://hubdrive.space/file/2250143195',
+    '1080p × 264 DD 5.1': 'https://usersdrive.com/5mkwf4m9mijs.html',
+    '1080p 10Bit (Hindi + English)': 'https://hubdrive.space/file/2198424005',
+    '4K UHD 2160p WEB-DL DDP5.1 DV HDR x265': 'https://usersdrive.com/gztfc8n0hrhq.html'
   };
   const handleDownloadClick = () => {
     const newCount = clickCount + 1;
@@ -254,8 +256,9 @@ const Superman2025Post = () => {
                   <p>You can now access download options!</p>
                 )}
                 <p>Runtime: 2h 10m | Action/Sci-fi | 2025</p>
-                <p>Multiple quality options: 720p, 1080p, 4K UHD</p>
-                <p>File sizes: Coming soon</p>
+                <p>Multiple quality options: 720p, 1080p, 4K UHD (2160p)</p>
+                <p>File sizes: 3.0GB (4K) and more</p>
+                <p>Languages: English, Hindi (select options)</p>
                 {clickCount >= requiredClicks && (
                   <p>Click the download button above to access all options</p>
                 )}
@@ -265,38 +268,52 @@ const Superman2025Post = () => {
               <div className="download-options">
                 <h2>Select Quality & Format</h2>
                 <div className="quality-section">
-                  <h3>Standard Definition</h3>
+                  <h3>Standard Definition (720p)</h3>
                   <div className="quality-buttons" style={{display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center'}}>
                     <button 
                       className="quality-btn"
-                      onClick={() => handleQualityClick('720p WEB-DL')}
+                      onClick={() => handleQualityClick('720p × 264')}
                       style={{minWidth: '350px'}}
                     >
-                      720p WEB-DL [Coming soon]
+                      720p × 264
+                    </button>
+                    <button 
+                      className="quality-btn"
+                      onClick={() => handleQualityClick('720p 10Bit (Hindi + English)')}
+                      style={{minWidth: '350px'}}
+                    >
+                      720p 10Bit (Hindi + English)
                     </button>
                   </div>
                 </div>
                 <div className="quality-section">
-                  <h3>Full HD</h3>
+                  <h3>Full HD (1080p)</h3>
                   <div className="quality-buttons" style={{display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center'}}>
                     <button 
                       className="quality-btn"
-                      onClick={() => handleQualityClick('1080p WEB-DL')}
+                      onClick={() => handleQualityClick('1080p × 264 DD 5.1')}
                       style={{minWidth: '350px'}}
                     >
-                      1080p WEB-DL [Coming soon]
+                      1080p × 264 DD 5.1
+                    </button>
+                    <button 
+                      className="quality-btn"
+                      onClick={() => handleQualityClick('1080p 10Bit (Hindi + English)')}
+                      style={{minWidth: '350px'}}
+                    >
+                      1080p 10Bit (Hindi + English)
                     </button>
                   </div>
                 </div>
                 <div className="quality-section">
-                  <h3>4K Ultra HD</h3>
+                  <h3>4K Ultra HD (2160p)</h3>
                   <div className="quality-buttons" style={{display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center'}}>
                     <button 
                       className="quality-btn"
-                      onClick={() => handleQualityClick('4K UHD WEB-DL')}
+                      onClick={() => handleQualityClick('4K UHD 2160p WEB-DL DDP5.1 DV HDR x265')}
                       style={{minWidth: '350px'}}
                     >
-                      4K UHD WEB-DL [Coming soon]
+                      2160p WEB-DL DDP5.1 DV HDR x265 (3.0GB)
                     </button>
                   </div>
                 </div>
@@ -305,7 +322,7 @@ const Superman2025Post = () => {
                   <p>📱 Compatible with all devices</p>
                   <p>⚡ High-speed download servers</p>
                   <p>🎯 Warner Bros. WEB-DL Quality</p>
-                  <p>🔥 4K version coming soon</p>
+                  <p>🔥 Multiple language options available (English & Hindi)</p>
                 </div>
               </div>
             )}
