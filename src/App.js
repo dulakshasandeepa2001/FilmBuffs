@@ -4,6 +4,7 @@ import './App.css';
 import DunePartTwoPost from './pages/movie-posts/DunePartTwo';
 import TheBatmanPost from './pages/movie-posts/TheBatman';
 import MissionImpossiblePost from './pages/movie-posts/MissionImpossible';
+import MissionImpossibleFinalReckoningPost from './pages/movie-posts/MissionImpossibleFinalReckoning';
 import TalkToMePost from './pages/movie-posts/TalkToMe';
 import M3GANPost from './pages/movie-posts/M3GAN';
 import BarbiePost from './pages/movie-posts/Barbie';
@@ -54,6 +55,15 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+      {
+        id: 28,
+        title: "Mission Impossible - The Final Reckoning",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShcMw2wUx24KAWkT-eQaC8bCB5EzkApaInrKpXeGm_UM8HcBlN",
+        rating: "8.2",
+        year: "2025",
+        watchUrl: "#",
+        description: "In the epic conclusion to the Mission: Impossible saga, Ethan Hunt and his IMF team face their deadliest enemy yet. As past choices return to haunt him, Hunt must make the ultimate sacrifice to protect those he loves most."
+      },
       {
         id: 27,
         title: "Superman",
@@ -164,6 +174,15 @@ const movieData = {
     
   ],
   action: [
+    {
+      id: 28,
+      title: "Mission Impossible - The Final Reckoning",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShcMw2wUx24KAWkT-eQaC8bCB5EzkApaInrKpXeGm_UM8HcBlN",
+      rating: "8.2",
+      year: "2025",
+      watchUrl: "#",
+      description: "In the epic conclusion to the Mission: Impossible saga, Ethan Hunt and his IMF team face their deadliest enemy yet. As past choices return to haunt him, Hunt must make the ultimate sacrifice to protect those he loves most."
+    },
     {
       id: 24,
       title: "Jurassic World Rebirth",
@@ -430,7 +449,9 @@ const MovieCard = ({ movie }) => {
     let urlTitle = movie.title.toLowerCase();
     
     // Handle specific movie title mappings
-    if (urlTitle.includes('mission: impossible')) {
+    if (urlTitle.includes('mission impossible - the final reckoning')) {
+      urlTitle = 'mission-impossible-final-reckoning';
+    } else if (urlTitle.includes('mission: impossible')) {
       urlTitle = 'mission-impossible';
     } else if (urlTitle.includes('dune: part two')) {
       urlTitle = 'dune-part-two';
@@ -753,6 +774,7 @@ function App() {
         <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
   <Route path="/movies/superman-2025" element={<Superman2025Post />} />
         <Route path="/movies/the-pickup" element={<ThePickupPost />} />
+        <Route path="/movies/mission-impossible-final-reckoning" element={<MissionImpossibleFinalReckoningPost />} />
       </Routes>
 
       <Footer />
