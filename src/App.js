@@ -26,6 +26,7 @@ import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
 import WednesdaySeason2Post from './pages/movie-posts/WednesdaySeason2';
+import AlienEarthPost from './pages/movie-posts/AlienEarth';
 import ThePickupPost from './pages/movie-posts/ThePickup';
 import Superman2025Post from './pages/movie-posts/Superman2025';
 
@@ -55,15 +56,23 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
-      {
-        id: 28,
-        title: "Mission Impossible - The Final Reckoning",
-        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShcMw2wUx24KAWkT-eQaC8bCB5EzkApaInrKpXeGm_UM8HcBlN",
-        rating: "8.2",
-        year: "2025",
-        watchUrl: "#",
-        description: "In the epic conclusion to the Mission: Impossible saga, Ethan Hunt and his IMF team face their deadliest enemy yet. As past choices return to haunt him, Hunt must make the ultimate sacrifice to protect those he loves most."
-      },
+    {
+      id: 29,
+      title: "Alien: Earth",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKBTdQQVzT5EA37PubvEMvnPNJ2og0eDOvgoinUEGa9gJ4MtNk",
+      rating: "8.5",
+      year: "2025",
+      description: "A thrilling new sci-fi drama series set in 2025. When mysterious extraterrestrial forces arrive on Earth, humanity must unite to face an unprecedented threat. Follow the journey of scientists, soldiers, and ordinary people as they struggle to survive, adapt, and uncover the secrets behind the alien invasion. 1 season."
+    },
+    {
+      id: 28,
+      title: "Mission Impossible - The Final Reckoning",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShcMw2wUx24KAWkT-eQaC8bCB5EzkApaInrKpXeGm_UM8HcBlN",
+      rating: "8.2",
+      year: "2025",
+      watchUrl: "#",
+      description: "In the epic conclusion to the Mission: Impossible saga, Ethan Hunt and his IMF team face their deadliest enemy yet. As past choices return to haunt him, Hunt must make the ultimate sacrifice to protect those he loves most."
+    },
       {
         id: 27,
         title: "Superman",
@@ -295,6 +304,14 @@ const movieData = {
     }
   ],
   drama: [
+    {
+      id: 29,
+      title: "Alien: Earth",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKBTdQQVzT5EA37PubvEMvnPNJ2og0eDOvgoinUEGa9gJ4MtNk",
+      rating: "8.5",
+      year: "2025",
+      description: "A thrilling new sci-fi drama series set in 2025. When mysterious extraterrestrial forces arrive on Earth, humanity must unite to face an unprecedented threat. Follow the journey of scientists, soldiers, and ordinary people as they struggle to survive, adapt, and uncover the secrets behind the alien invasion. 1 season."
+    },
     {
       id: 25,
       title: "Wednesday Season 2",
@@ -774,7 +791,8 @@ function App() {
         <Route path="/movies/jurassic-world-rebirth" element={<JurassicWorldRebirthPost />} />
   <Route path="/movies/superman-2025" element={<Superman2025Post />} />
         <Route path="/movies/the-pickup" element={<ThePickupPost />} />
-        <Route path="/movies/mission-impossible-final-reckoning" element={<MissionImpossibleFinalReckoningPost />} />
+  <Route path="/movies/mission-impossible-final-reckoning" element={<MissionImpossibleFinalReckoningPost />} />
+  <Route path="/movies/alien-earth" element={<AlienEarthPost />} />
       </Routes>
 
       <Footer />
