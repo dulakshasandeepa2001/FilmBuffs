@@ -29,6 +29,8 @@ import WednesdaySeason2Post from './pages/movie-posts/WednesdaySeason2';
 import AlienEarthPost from './pages/movie-posts/AlienEarth';
 import ThePickupPost from './pages/movie-posts/ThePickup';
 import Superman2025Post from './pages/movie-posts/Superman2025';
+import TheMapThatLeadsToYouPost from './pages/movie-posts/TheMapThatLeadsToYou';
+import F1Post from './pages/movie-posts/F1';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -56,6 +58,24 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 31,
+      title: "F1",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT85TrSaHuKW1dis3_6g4acoHHaNvt1crmPF1MQKfn6QNjWXuiM",
+      rating: "8.5",
+      year: "2025",
+      description: "An action-packed sports drama chronicling the high-stakes world of Formula 1 racing. When a rookie driver gets the opportunity of a lifetime to join an elite racing team, he must navigate fierce rivalries, dangerous tracks, and his own personal demons to become a champion.",
+      watchUrl: "https://www.youtube.com/watch?v=8RInW7zWDn8"
+    },
+    {
+      id: 30,
+      title: "The Map That Leads to You",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJix5tp_t--OlEPLwAy7rdYzAwpbuBUeFZMMLJVHK0R3VKqc1",
+      rating: "7.8",
+      year: "2025",
+      description: "A sweeping romance and drama set in 2025. Two strangers meet by chance and embark on a journey across Europe, discovering love, heartbreak, and the meaning of destiny. Their story unfolds through a series of maps, letters, and unforgettable moments.",
+      watchUrl: "https://www.youtube.com/results?search_query=The+Map+That+Leads+to+You+2025+trailer"
+    },
     {
       id: 29,
       title: "Alien: Earth",
@@ -183,6 +203,15 @@ const movieData = {
     
   ],
   action: [
+    {
+      id: 31,
+      title: "F1",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT85TrSaHuKW1dis3_6g4acoHHaNvt1crmPF1MQKfn6QNjWXuiM",
+      rating: "8.5",
+      year: "2025",
+      description: "An action-packed sports drama chronicling the high-stakes world of Formula 1 racing. When a rookie driver gets the opportunity of a lifetime to join an elite racing team, he must navigate fierce rivalries, dangerous tracks, and his own personal demons to become a champion.",
+      watchUrl: "https://www.youtube.com/watch?v=8RInW7zWDn8"
+    },
     {
       id: 28,
       title: "Mission Impossible - The Final Reckoning",
@@ -360,6 +389,24 @@ const movieData = {
       title: "Saltburn",
       imageUrl: "https://image.tmdb.org/t/p/w500/qjhahNLSZ705B5JP92YMEYPocPz.jpg",
       rating: "7.1",
+      year: "2023"
+    }
+  ],
+  romantic: [
+    {
+      id: 30,
+      title: "The Map That Leads to You",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJix5tp_t--OlEPLwAy7rdYzAwpbuBUeFZMMLJVHK0R3VKqc1",
+      rating: "7.8",
+      year: "2025",
+      description: "A sweeping romance and drama set in 2025. Two strangers meet by chance and embark on a journey across Europe, discovering love, heartbreak, and the meaning of destiny. Their story unfolds through a series of maps, letters, and unforgettable moments.",
+      watchUrl: "https://www.youtube.com/results?search_query=The+Map+That+Leads+to+You+2025+trailer"
+    },
+    {
+      id: 8,
+      title: "Anyone But You",
+      imageUrl: "https://image.tmdb.org/t/p/w500/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg",
+      rating: "6.8",
       year: "2023"
     }
   ],
@@ -753,6 +800,7 @@ function App() {
           <Link to="/horror" className={`nav-link ${location.pathname === '/horror' ? 'active' : ''}`} onClick={handleNavClick}>Horror</Link>
           <Link to="/comedy" className={`nav-link ${location.pathname === '/comedy' ? 'active' : ''}`} onClick={handleNavClick}>Comedy</Link>
           <Link to="/drama" className={`nav-link ${location.pathname === '/drama' ? 'active' : ''}`} onClick={handleNavClick}>Drama</Link>
+          <Link to="/romantic" className={`nav-link ${location.pathname === '/romantic' ? 'active' : ''}`} onClick={handleNavClick}>Romantic</Link>
         </div>
       </nav>
 
@@ -764,6 +812,7 @@ function App() {
         <Route path="/drama" element={<Page title="Drama Movies" movies={movieData.drama} />} />
         <Route path="/thriller" element={<Page title="Thriller Movies" movies={movieData.thriller} />} />
         <Route path="/scifi" element={<Page title="Sci-Fi Movies" movies={movieData.scifi} />} />
+        <Route path="/romantic" element={<Page title="Romantic Movies" movies={movieData.romantic} />} />
         
         {/* Movie Post Pages */}
         <Route path="/movies/dune-part-two" element={<DunePartTwoPost />} />
@@ -792,10 +841,10 @@ function App() {
   <Route path="/movies/superman-2025" element={<Superman2025Post />} />
         <Route path="/movies/the-pickup" element={<ThePickupPost />} />
   <Route path="/movies/mission-impossible-final-reckoning" element={<MissionImpossibleFinalReckoningPost />} />
-  <Route path="/movies/alien-earth" element={<AlienEarthPost />} />
-      </Routes>
-
-      <Footer />
+        <Route path="/movies/alien-earth" element={<AlienEarthPost />} />
+        <Route path="/movies/the-map-that-leads-to-you" element={<TheMapThatLeadsToYouPost />} />
+        <Route path="/movies/f1" element={<F1Post />} />
+      </Routes>      <Footer />
     </div>
   );
 }
