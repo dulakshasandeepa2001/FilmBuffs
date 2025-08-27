@@ -3,24 +3,18 @@ import '../MoviePost.css';
 
 const IKnowWhatYouDidLastSummerPost = () => {
   const [clickCount, setClickCount] = useState(0);
-  const requiredClicks = 5;
+  const requiredClicks = 1;
 
   useEffect(() => {
     document.title = "I Know What You Did Last Summer (2025) Full Movie Download & Watch Online | Film Buffs";
     // SEO meta tags setup
   }, []);
 
-  const [clickCounts, setClickCounts] = useState({});
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
   const [showServerPopup, setShowServerPopup] = useState(false);
   const [selectedQuality, setSelectedQuality] = useState('');
 
-  const redirectUrls = [
-    'https://incredibleenhancementslightning.com/mb44w5nrf?key=b81da213cd8d52d142d1bec92e3e014d',
-    'https://incredibleenhancementslightning.com/d0jtntz4zi?key=b9a5ee9377f9a6709624ba8c106313f9',
-    'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
-    'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b'
-  ];
+  // No longer need redirect URLs as we're using direct download links
 
   // Download links for different quality options
   const downloadLinks = {
@@ -31,26 +25,14 @@ const IKnowWhatYouDidLastSummerPost = () => {
   };
 
   const handleDownloadClick = () => {
-    const newCount = clickCount + 1;
-    setClickCount(newCount);
-    if (newCount <= 4) {
-      const urlIndex = (newCount - 1) % redirectUrls.length;
-      window.open(redirectUrls[urlIndex], '_blank');
-    }
+    // Only need one click to show download options
+    setClickCount(1);
   };
 
   const handleQualityClick = (quality) => {
+    // Show the server selection popup immediately
     setSelectedQuality(quality);
-    const currentCount = clickCounts[quality] || 0;
-    const newCount = currentCount + 1;
-    setClickCounts(prev => ({ ...prev, [quality]: newCount }));
-    
-    if (newCount <= 4) {
-      const urlIndex = (newCount - 1) % redirectUrls.length;
-      window.open(redirectUrls[urlIndex], '_blank');
-    } else if (newCount >= 5) {
-      setShowServerPopup(true);
-    }
+    setShowServerPopup(true);
   };
 
   const handleServerSelect = (server) => {
@@ -95,17 +77,11 @@ const IKnowWhatYouDidLastSummerPost = () => {
                 </button>
               )}
               <div className="download-info">
-                {clickCount < requiredClicks ? (
-                  <p>Click the download button {requiredClicks - clickCount} more time(s) to access download options</p>
-                ) : (
-                  <p>You can now access download options!</p>
-                )}
+                <p>Click the download button to access download options!</p>
                 <p>4K Dolby Vision HDR and SDR quality available</p>
                 <p>DDP 5.1 Atmos surround sound audio</p>
                 <p>File sizes: 6.59GB - 19.33GB</p>
-                {clickCount >= requiredClicks && (
-                  <p>Click the download button above to access all options</p>
-                )}
+                <p>All downloads available instantly - no waiting!</p>
               </div>
             </div>
             {showDownloadOptions && clickCount >= requiredClicks && (
@@ -134,7 +110,6 @@ const IKnowWhatYouDidLastSummerPost = () => {
                   </div>
                 </div>
                 <div className="instructions">
-                  <p>🔴 Click any quality button 5 times to access download links</p>
                   <p>📱 Compatible with all devices</p>
                   <p>⚡ High-speed download servers</p>
                   <p>🔊 5.1 Atmos Surround Sound Audio</p>

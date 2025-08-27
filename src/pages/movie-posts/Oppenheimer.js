@@ -3,22 +3,14 @@ import '../MoviePost.css';
 
 const OppenheimerPost = () => {
   const [clickCount, setClickCount] = useState(0);
-  const requiredClicks = 5;
+  const requiredClicks = 1; // Only need one click to show download options
   
   // DownloadPage functionality
-  const [clickCounts, setClickCounts] = useState({});
   const [showPopup, setShowPopup] = useState(false);
   const [currentQuality, setCurrentQuality] = useState('');
-  const [serverClickCounts, setServerClickCounts] = useState({});
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
-  // Redirect URLs for the first 4 clicks
-  const redirectUrls = [
-    'https://incredibleenhancementslightning.com/mb44w5nrf?key=b81da213cd8d52d142d1bec92e3e014d',
-    'https://incredibleenhancementslightning.com/d0jtntz4zi?key=b9a5ee9377f9a6709624ba8c106313f9',
-    'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
-    'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b'
-  ];
+  // No longer need redirect URLs as we're using direct download links
 
   // Download links for Oppenheimer
   const downloadLinks = {
@@ -45,39 +37,14 @@ const OppenheimerPost = () => {
   };
 
   const handleDownloadClick = () => {
-    const newCount = clickCount + 1;
-    setClickCount(newCount);
-    
-    if (newCount <= 4) {
-      // For the first 4 clicks, redirect to the protection URLs
-      const urlIndex = (newCount - 1) % redirectUrls.length;
-      window.open(redirectUrls[urlIndex], '_blank');
-    }
-    // On the 5th click, just update the state to show download options
+    // Only need one click to show download options
+    setClickCount(1);
   };
 
   const handleQualityClick = (quality) => {
-    const currentCount = clickCounts[quality] || 0;
-    const newCount = currentCount + 1;
-
-    setClickCounts(prev => ({
-      ...prev,
-      [quality]: newCount
-    }));
-
-    if (newCount <= 4) {
-      // For the first 4 clicks, redirect to the URLs
-      const urlIndex = (newCount - 1) % redirectUrls.length;
-      window.open(redirectUrls[urlIndex], '_blank');
-    } else if (newCount === 5) {
-      // On the 5th click, show the popup with download links
-      setCurrentQuality(quality);
-      setShowPopup(true);
-    } else {
-      // After 5th click, directly show popup
-      setCurrentQuality(quality);
-      setShowPopup(true);
-    }
+    // Show the server selection popup immediately
+    setCurrentQuality(quality);
+    setShowPopup(true);
   };
 
   const closePopup = () => {
@@ -91,36 +58,21 @@ const OppenheimerPost = () => {
   };
 
   const handleServerClick = (serverName) => {
-    const serverKey = `${currentQuality}-${serverName}`;
-    const currentCount = serverClickCounts[serverKey] || 0;
-    const newCount = currentCount + 1;
-
-    setServerClickCounts(prev => ({
-      ...prev,
-      [serverKey]: newCount
-    }));
-
-    if (newCount <= 4) {
-      // For the first 4 clicks, redirect to random URLs
-      const randomUrl = redirectUrls[Math.floor(Math.random() * redirectUrls.length)];
-      window.open(randomUrl, '_blank');
-    } else if (newCount >= 5) {
-      // On the 5th click and beyond, provide the actual download link based on server
-      let downloadKey;
-      
-      // All qualities now have server-specific links
-      if (serverName === 'Server 1') {
-        downloadKey = currentQuality + '-mega';
-      } else if (serverName === 'Server 2') {
-        downloadKey = currentQuality + '-gdrive';
-      } else if (serverName === 'Server 3') {
-        downloadKey = currentQuality + '-viking';
-      }
-      
-      const downloadLink = downloadLinks[downloadKey];
-      if (downloadLink) {
-        handleDownload(downloadLink);
-      }
+    // Always provide the download link immediately without requiring multiple clicks
+    let downloadKey;
+    
+    // Determine the download key based on server selection
+    if (serverName === 'Server 1') {
+      downloadKey = currentQuality + '-mega';
+    } else if (serverName === 'Server 2') {
+      downloadKey = currentQuality + '-gdrive';
+    } else if (serverName === 'Server 3') {
+      downloadKey = currentQuality + '-viking';
+    }
+    
+    const downloadLink = downloadLinks[downloadKey];
+    if (downloadLink) {
+      handleDownload(downloadLink);
     }
   };
 
@@ -169,16 +121,10 @@ const OppenheimerPost = () => {
               )}
               
               <div className="download-info">
-                {clickCount < requiredClicks ? (
-                  <p>Click the download button {requiredClicks - clickCount} more time(s) to access download options</p>
-                ) : (
-                  <p>You can now access download options!</p>
-                )}
+                <p>Click the download button to access download options!</p>
                 <p>Multiple quality options available: 480p, 720p, 1080p</p>
                 <p>Formats: x264, x265</p>
-                {clickCount >= requiredClicks && (
-                  <p>Click the download button above to access all options</p>
-                )}
+                <p>All downloads available instantly - no waiting!</p>
               </div>
             </div>
 
@@ -242,7 +188,7 @@ const OppenheimerPost = () => {
                 </div>
 
                 <div className="instructions">
-                  <p>🔴 Click any quality button 5 times to access download links</p>
+                  <p>🔴 Select any quality to continue to server selection</p>
                   <p>📱 Compatible with all devices</p>
                   <p>⚡ High-speed download servers</p>
                 </div>
@@ -312,7 +258,7 @@ const OppenheimerPost = () => {
             </div>
             
             <div className="popup-info">
-              <p>🔴 Click any server button 5 times to download</p>
+              <p>🔴 Choose any server to download immediately</p>
               <p>📥 Each server provides the same high-quality file</p>
               <p>🔒 Secure and virus-free downloads</p>
             </div>

@@ -198,10 +198,10 @@ const WednesdaySeason2Post = () => {
 
   // Redirect URLs for the first 4 clicks
   const redirectUrls = [
-    'https://incredibleenhancementslightning.com/mb44w5nrf?key=b81da213cd8d52d142d1bec92e3e014d',
-    'https://incredibleenhancementslightning.com/d0jtntz4zi?key=b9a5ee9377f9a6709624ba8c106313f9',
-    'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
-    'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b'
+    'https://otieu.com/4/9550585',
+    'https://otieu.com/4/9550586',
+    'https://otieu.com/4/9545201',
+    'https://otieu.com/4/9550584'
   ];
 
   // Download links for Wednesday Season 2

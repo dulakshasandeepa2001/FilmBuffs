@@ -3,7 +3,7 @@ import '../MoviePost.css';
 
 const AlienEarthPost = () => {
   const [clickCount, setClickCount] = useState(0);
-  const requiredClicks = 5;
+  const requiredClicks = 1;
 
   useEffect(() => {
     document.title = "Alien: Earth (2025) Full Series Download & Watch Online | Film Buffs";
@@ -14,10 +14,10 @@ const AlienEarthPost = () => {
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
   const redirectUrls = [
-    'https://incredibleenhancementslightning.com/mb44w5nrf?key=b81da213cd8d52d142d1bec92e3e014d',
-    'https://incredibleenhancementslightning.com/d0jtntz4zi?key=b9a5ee9377f9a6709624ba8c106313f9',
-    'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
-    'https://incredibleenhancementslightning.com/c536r0iv?key=def603400fdfbe36eeeb9209b5e1148b'
+    'https://otieu.com/4/9550585',
+    'https://otieu.com/4/9550586',
+    'https://otieu.com/4/9545201',
+    'https://otieu.com/4/9550584'
   ];
 
   // Download links for different episodes and qualities
@@ -46,8 +46,8 @@ const AlienEarthPost = () => {
   const handleDownloadClick = () => {
     const newCount = clickCount + 1;
     setClickCount(newCount);
-    if (newCount <= 4) {
-      const urlIndex = (newCount - 1) % redirectUrls.length;
+    if (newCount <= 1) {
+      const urlIndex = 0; // Always use the first redirect URL
       window.open(redirectUrls[urlIndex], '_blank');
     }
   };
@@ -56,10 +56,10 @@ const AlienEarthPost = () => {
     const currentCount = clickCounts[quality] || 0;
     const newCount = currentCount + 1;
     setClickCounts(prev => ({ ...prev, [quality]: newCount }));
-    if (newCount <= 4) {
-      const urlIndex = (newCount - 1) % redirectUrls.length;
+    if (newCount <= 1) {
+      const urlIndex = 0; // Always use the first redirect URL
       window.open(redirectUrls[urlIndex], '_blank');
-    } else if (newCount >= 5) {
+    } else if (newCount >= 2) {
       const downloadLink = downloadLinks[quality];
       if (downloadLink) window.open(downloadLink, '_blank');
     }
@@ -100,17 +100,9 @@ const AlienEarthPost = () => {
                 </button>
               )}
               <div className="download-info">
-                {clickCount < requiredClicks ? (
-                  <p>Click the download button {requiredClicks - clickCount} more time(s) to access download options</p>
-                ) : (
-                  <p>You can now access download options!</p>
-                )}
                 <p>Complete Season 1 - Episodes 1-3 Available</p>
                 <p>Multiple quality options: 1080p H264, 1080p DV HDR, 4K SDR, 4K DV HDR</p>
                 <p>File sizes: 1.93GB - 6.48GB per episode</p>
-                {clickCount >= requiredClicks && (
-                  <p>Click the download button above to access all options</p>
-                )}
               </div>
             </div>
             {showDownloadOptions && clickCount >= requiredClicks && (
@@ -178,8 +170,7 @@ const AlienEarthPost = () => {
                 </div>
                 
                 <div className="instructions">
-                  <p>🔴 Click any quality button 5 times to access download links</p>
-                  <p>📱 Compatible with all devices</p>
+                  <p> Compatible with all devices</p>
                   <p>⚡ High-speed download servers</p>
                   <p>🎯 All file names include proper metadata</p>
                   <p>🔥 Multiple quality options available</p>
