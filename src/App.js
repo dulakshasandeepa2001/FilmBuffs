@@ -31,6 +31,9 @@ import ThePickupPost from './pages/movie-posts/ThePickup';
 import Superman2025Post from './pages/movie-posts/Superman2025';
 import TheMapThatLeadsToYouPost from './pages/movie-posts/TheMapThatLeadsToYou';
 import F1Post from './pages/movie-posts/F1';
+import KPopDemonHuntersPost from './pages/movie-posts/KPopDemonHunters';
+import IKnowWhatYouDidLastSummerPost from './pages/movie-posts/IKnowWhatYouDidLastSummer';
+import TogetherPost from './pages/movie-posts/Together';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
@@ -58,6 +61,30 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 34,
+      title: "Together",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSW1FzzjgYeF_ARyk2gInJMc9Q0rAkYSGST7VLI48J48Xn6j67M",
+      rating: "7.8",
+      year: "2025",
+      description: "A psychological horror film that explores the terrifying consequences of collective trauma and isolation. Six friends at a remote cabin for a reunion weekend discover they're unable to physically separate from each other, forcing them to confront the dark secret that binds them together."
+    },
+    {
+      id: 33,
+      title: "I Know What You Did Last Summer",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIJDVkAddVE006PU9kip20wEONtjik8-S1jogokxIlelsPTd6",
+      rating: "7.5",
+      year: "2025",
+      description: "A modern reboot of the classic slasher film. A group of friends are haunted by a shared secret from their past when they begin to receive threatening messages one year after a tragic accident. As they try to uncover who's behind the messages, they find themselves being hunted down one by one."
+    },
+    {
+      id: 32,
+      title: "KPop Demon Hunters Sing-Along",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiQPAU0vExAsL_LLn1IejwD-e4TNAGB-952JTZ000HZ-lfNKOh",
+      rating: "7.8",
+      year: "2025",
+      description: "A high-energy action musical featuring a talented K-pop girl group who discover they're the latest in a long line of demon hunters. By day, they're chart-topping sensations; by night, they battle supernatural forces threatening the world. This special sing-along version includes on-screen lyrics for all original songs."
+    },
     {
       id: 31,
       title: "F1",
@@ -204,6 +231,14 @@ const movieData = {
   ],
   action: [
     {
+      id: 32,
+      title: "KPop Demon Hunters Sing-Along",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiQPAU0vExAsL_LLn1IejwD-e4TNAGB-952JTZ000HZ-lfNKOh",
+      rating: "7.8",
+      year: "2025",
+      description: "A high-energy action musical featuring a talented K-pop girl group who discover they're the latest in a long line of demon hunters. By day, they're chart-topping sensations; by night, they battle supernatural forces threatening the world. This special sing-along version includes on-screen lyrics for all original songs."
+    },
+    {
       id: 31,
       title: "F1",
       imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT85TrSaHuKW1dis3_6g4acoHHaNvt1crmPF1MQKfn6QNjWXuiM",
@@ -265,6 +300,22 @@ const movieData = {
     }
   ],
   horror: [
+    {
+      id: 34,
+      title: "Together",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSW1FzzjgYeF_ARyk2gInJMc9Q0rAkYSGST7VLI48J48Xn6j67M",
+      rating: "7.8",
+      year: "2025",
+      description: "A psychological horror film that explores the terrifying consequences of collective trauma and isolation. Six friends at a remote cabin for a reunion weekend discover they're unable to physically separate from each other, forcing them to confront the dark secret that binds them together."
+    },
+    {
+      id: 33,
+      title: "I Know What You Did Last Summer",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIJDVkAddVE006PU9kip20wEONtjik8-S1jogokxIlelsPTd6",
+      rating: "7.5",
+      year: "2025",
+      description: "A modern reboot of the classic slasher film. A group of friends are haunted by a shared secret from their past when they begin to receive threatening messages one year after a tragic accident. As they try to uncover who's behind the messages, they find themselves being hunted down one by one."
+    },
     {
       id: 21,
       title: "28 Years Later",
@@ -567,6 +618,12 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'the-pickup';
     } else if (urlTitle.includes('superman')) {
       urlTitle = 'superman-2025';
+    } else if (urlTitle.includes('kpop demon hunters')) {
+      urlTitle = 'kpop-demon-hunters';
+    } else if (urlTitle.includes('i know what you did last summer')) {
+      urlTitle = 'i-know-what-you-did-last-summer';
+    } else if (urlTitle.includes('together')) {
+      urlTitle = 'together';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -844,6 +901,9 @@ function App() {
         <Route path="/movies/alien-earth" element={<AlienEarthPost />} />
         <Route path="/movies/the-map-that-leads-to-you" element={<TheMapThatLeadsToYouPost />} />
         <Route path="/movies/f1" element={<F1Post />} />
+        <Route path="/movies/kpop-demon-hunters" element={<KPopDemonHuntersPost />} />
+        <Route path="/movies/i-know-what-you-did-last-summer" element={<IKnowWhatYouDidLastSummerPost />} />
+        <Route path="/movies/together" element={<TogetherPost />} />
       </Routes>      <Footer />
     </div>
   );
