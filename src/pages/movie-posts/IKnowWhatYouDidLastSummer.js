@@ -46,7 +46,7 @@ const IKnowWhatYouDidLastSummerPost = () => {
     <div className="movie-post-page">
       <div className="movie-poster-container">
         <img 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIJDVkAddVE006PU9kip20wEONtjik8-S1jogokxIlelsPTd6" 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-FkFMeOIyaH7KEDXFhc3p8itdq1EZGDKYmWhwC0iry-Ka3Pr" 
           alt="I Know What You Did Last Summer poster" 
           className="movie-poster-image" 
           title="I Know What You Did Last Summer (2025) - Official Movie Poster"

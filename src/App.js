@@ -22,6 +22,7 @@ import TangledPost from './pages/movie-posts/Tangled';
 import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
 import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
 import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater';
+import WeaponsPost from './pages/movie-posts/Weapons';
 
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
@@ -37,9 +38,7 @@ import TogetherPost from './pages/movie-posts/Together';
 
 // Random redirect links for first-time button clicks
 const randomRedirectLinks = [
-  'https://incredibleenhancementslightning.com/mb44w5nrf?key=b81da213cd8d52d142d1bec92e3e014d',
-  'https://incredibleenhancementslightning.com/d0jtntz4zi?key=b9a5ee9377f9a6709624ba8c106313f9',
-  'https://incredibleenhancementslightning.com/dzzpxkz4?key=e9c5b50948edadcec659d3dc875f7542',
+ 
   'https://otieu.com/4/9545201'
 ];
 
@@ -61,6 +60,14 @@ const handleFirstTimeClick = (e, buttonId) => {
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 35,
+      title: "Weapons",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-FkFMeOIyaH7KEDXFhc3p8itdq1EZGDKYmWhwC0iry-Ka3Pr",
+      rating: "7.8",
+      year: "2025",
+      description: "When all but one child from the same class mysteriously vanish on the same night at exactly the same time, a community is left questioning who or what is behind their disappearance."
+    },
     {
       id: 34,
       title: "Together",
@@ -300,6 +307,14 @@ const movieData = {
     }
   ],
   horror: [
+    {
+      id: 35,
+      title: "Weapons",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-FkFMeOIyaH7KEDXFhc3p8itdq1EZGDKYmWhwC0iry-Ka3Pr",
+      rating: "7.8",
+      year: "2025",
+      description: "When all but one child from the same class mysteriously vanish on the same night at exactly the same time, a community is left questioning who or what is behind their disappearance."
+    },
     {
       id: 34,
       title: "Together",
@@ -624,6 +639,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'i-know-what-you-did-last-summer';
     } else if (urlTitle.includes('together')) {
       urlTitle = 'together';
+    } else if (urlTitle.includes('weapons')) {
+      urlTitle = 'weapons';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -904,6 +921,7 @@ function App() {
         <Route path="/movies/kpop-demon-hunters" element={<KPopDemonHuntersPost />} />
         <Route path="/movies/i-know-what-you-did-last-summer" element={<IKnowWhatYouDidLastSummerPost />} />
         <Route path="/movies/together" element={<TogetherPost />} />
+        <Route path="/movies/weapons" element={<WeaponsPost />} />
       </Routes>      <Footer />
     </div>
   );
