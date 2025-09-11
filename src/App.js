@@ -37,10 +37,7 @@ import KPopDemonHuntersPost from './pages/movie-posts/KPopDemonHunters';
 import IKnowWhatYouDidLastSummerPost from './pages/movie-posts/IKnowWhatYouDidLastSummer';
 import TogetherPost from './pages/movie-posts/Together';
 
-// Removed redirect links functionality
-// This function is kept for compatibility with existing code but now just returns false
-// We're keeping it to avoid changing every call site
-const handleFirstTimeClick = () => false; // Always proceed with normal behavior
+// Removed redirect links functionality completely
 
 // Updated movie data with specific movies for each category
 const movieData = {
