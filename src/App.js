@@ -23,6 +23,7 @@ import HowToTrainYourDragonPost from './pages/movie-posts/HowToTrainYourDragon';
 import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
 import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater';
 import WeaponsPost from './pages/movie-posts/Weapons';
+import TheGirlfriendPost from './pages/movie-posts/TheGirlfriend';
 
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
@@ -36,30 +37,22 @@ import KPopDemonHuntersPost from './pages/movie-posts/KPopDemonHunters';
 import IKnowWhatYouDidLastSummerPost from './pages/movie-posts/IKnowWhatYouDidLastSummer';
 import TogetherPost from './pages/movie-posts/Together';
 
-// Random redirect links for first-time button clicks
-const randomRedirectLinks = [
- 
-  'https://otieu.com/4/9545201'
-];
-
-// Global state for tracking individual button clicks
-const clickedButtons = new Set();
-
-// Function to handle first-time click redirect for individual buttons
-const handleFirstTimeClick = (e, buttonId) => {
-  if (!clickedButtons.has(buttonId)) {
-    e.preventDefault();
-    clickedButtons.add(buttonId);
-    const randomLink = randomRedirectLinks[Math.floor(Math.random() * randomRedirectLinks.length)];
-    window.open(randomLink, '_blank');
-    return true; // Indicates this was a first-time click for this button
-  }
-  return false; // Indicates normal behavior should proceed
-};
+// Removed redirect links functionality
+// This function is kept for compatibility with existing code but now just returns false
+// We're keeping it to avoid changing every call site
+const handleFirstTimeClick = () => false; // Always proceed with normal behavior
 
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 36,
+      title: "The Girlfriend",
+      imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQSDKJJbrAlhez-_qFHsNabgqhmMcBd1FBxhBv3FMIh-kma8F8y",
+      rating: "8.2",
+      year: "2025",
+      description: "A gripping psychological drama series where a mysterious woman enters the lives of an unsuspecting family, gradually unraveling their secrets and threatening to destroy everything they've built."
+    },
     {
       id: 35,
       title: "Weapons",
@@ -400,6 +393,14 @@ const movieData = {
   ],
   drama: [
     {
+      id: 36,
+      title: "The Girlfriend",
+      imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQSDKJJbrAlhez-_qFHsNabgqhmMcBd1FBxhBv3FMIh-kma8F8y",
+      rating: "8.2",
+      year: "2025",
+      description: "A gripping psychological drama series where a mysterious woman enters the lives of an unsuspecting family, gradually unraveling their secrets and threatening to destroy everything they've built."
+    },
+    {
       id: 29,
       title: "Alien: Earth",
       imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKBTdQQVzT5EA37PubvEMvnPNJ2og0eDOvgoinUEGa9gJ4MtNk",
@@ -570,12 +571,7 @@ const MovieCard = ({ movie }) => {
   const navigate = useNavigate();
 
   const handleDownload = (e) => {
-    const buttonId = `download-${movie.id}`;
-    if (handleFirstTimeClick(e, buttonId)) {
-      return;
-    }
-
-    // Original download functionality
+    // Original download functionality - redirect functionality removed
     let urlTitle = movie.title.toLowerCase();
     
     // Handle specific movie title mappings
@@ -641,6 +637,8 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'together';
     } else if (urlTitle.includes('weapons')) {
       urlTitle = 'weapons';
+    } else if (urlTitle.includes('the girlfriend')) {
+      urlTitle = 'the-girlfriend';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -650,11 +648,7 @@ const MovieCard = ({ movie }) => {
   };
 
   const handleWatchOnline = (e) => {
-    const buttonId = `watch-${movie.id}`;
-    if (handleFirstTimeClick(e, buttonId)) {
-      return;
-    }
-    // Open the watch URL if available
+    // Open the watch URL if available - redirect functionality removed
     if (movie.watchUrl) {
       window.open(movie.watchUrl, '_blank');
     }
@@ -666,12 +660,7 @@ const MovieCard = ({ movie }) => {
       return;
     }
     
-    const buttonId = `poster-${movie.id}`;
-    if (handleFirstTimeClick(e, buttonId)) {
-      return;
-    }
-    
-    // Navigate to movie details page
+    // Navigate to movie details page - redirect functionality removed
     handleDownload(e);
   };
 
@@ -738,10 +727,7 @@ const Page = ({ title, movies }) => {
   };
 
   const handleSearchFocus = (e) => {
-    const buttonId = 'search-input';
-    if (handleFirstTimeClick(e, buttonId)) {
-      return;
-    }
+    // Removed redirect functionality
   };
 
   return (
@@ -779,11 +765,7 @@ const Page = ({ title, movies }) => {
 // Add Footer Component
 const Footer = () => {
   const handleFooterClick = (e) => {
-    const linkText = e.target.textContent || e.target.getAttribute('href') || 'unknown';
-    const buttonId = `footer-${linkText.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
-    if (handleFirstTimeClick(e, buttonId)) {
-      return false;
-    }
+    // Removed redirect functionality
   };
 
   return (
@@ -849,17 +831,11 @@ function App() {
   const location = useLocation();
 
   const handleNavClick = (e) => {
-    const buttonId = `nav-${e.target.textContent.toLowerCase().replace(/\s+/g, '-')}`;
-    if (handleFirstTimeClick(e, buttonId)) {
-      return false;
-    }
+    // Removed redirect functionality
   };
 
   const handleLogoClick = (e) => {
-    const buttonId = 'nav-logo';
-    if (handleFirstTimeClick(e, buttonId)) {
-      return false;
-    }
+    // Removed redirect functionality
   };
 
   return (
@@ -922,6 +898,7 @@ function App() {
         <Route path="/movies/i-know-what-you-did-last-summer" element={<IKnowWhatYouDidLastSummerPost />} />
         <Route path="/movies/together" element={<TogetherPost />} />
         <Route path="/movies/weapons" element={<WeaponsPost />} />
+        <Route path="/movies/the-girlfriend" element={<TheGirlfriendPost />} />
       </Routes>      <Footer />
     </div>
   );
