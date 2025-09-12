@@ -24,6 +24,7 @@ import KarateKidLegendsPost from './pages/movie-posts/KarateKidLegends';
 import TwentyEightYearsLaterPost from './pages/movie-posts/TwentyEightYearsLater';
 import WeaponsPost from './pages/movie-posts/Weapons';
 import TheGirlfriendPost from './pages/movie-posts/TheGirlfriend';
+import SaiyaaraPost from './pages/movie-posts/Saiyaara';
 
 import EyesOfWakandaS1Post from './pages/movie-posts/EyesOfWakandaS1';
 import JurassicWorldRebirthPost from './pages/movie-posts/JurassicWorldRebirth';
@@ -42,6 +43,14 @@ import TogetherPost from './pages/movie-posts/Together';
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 37,
+      title: "Saiyaara",
+      imageUrl: "https://m.media-amazon.com/images/M/MV5BMTk2ZmFhYjctYWZiYy00N2IxLWEzMWItZGRiMDY4ZDQwZWFlXkEyXkFqcGc@._V1_FMjpg_UX933_.jpg",
+      rating: "7.6",
+      year: "2025",
+      description: "A captivating romantic drama that follows the journey of two individuals from different walks of life whose paths cross unexpectedly. Set against the backdrop of contemporary India, the film explores themes of love, destiny, and the courage to follow your heart."
+    },
     {
       id: 36,
       title: "The Girlfriend",
@@ -457,6 +466,14 @@ const movieData = {
     }
   ],
   romantic: [
+    {
+      id: 37,
+      title: "Saiyaara",
+      imageUrl: "https://m.media-amazon.com/images/M/MV5BMTk2ZmFhYjctYWZiYy00N2IxLWEzMWItZGRiMDY4ZDQwZWFlXkEyXkFqcGc@._V1_FMjpg_UX933_.jpg",
+      rating: "7.6",
+      year: "2025",
+      description: "A captivating romantic drama that follows the journey of two individuals from different walks of life whose paths cross unexpectedly. Set against the backdrop of contemporary India, the film explores themes of love, destiny, and the courage to follow your heart."
+    },
     {
       id: 30,
       title: "The Map That Leads to You",
@@ -896,6 +913,7 @@ function App() {
         <Route path="/movies/together" element={<TogetherPost />} />
         <Route path="/movies/weapons" element={<WeaponsPost />} />
         <Route path="/movies/the-girlfriend" element={<TheGirlfriendPost />} />
+        <Route path="/movies/saiyaara" element={<SaiyaaraPost />} />
       </Routes>      <Footer />
     </div>
   );
