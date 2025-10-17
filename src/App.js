@@ -37,12 +37,30 @@ import F1Post from './pages/movie-posts/F1';
 import KPopDemonHuntersPost from './pages/movie-posts/KPopDemonHunters';
 import IKnowWhatYouDidLastSummerPost from './pages/movie-posts/IKnowWhatYouDidLastSummer';
 import TogetherPost from './pages/movie-posts/Together';
+import GenVS2E7Post from './pages/movie-posts/GenVS2E7';
+import SplinterCellDeathwatchPost from './pages/movie-posts/SplinterCellDeathwatch';
 
 // Removed redirect links functionality completely
 
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 39,
+      title: "Splinter Cell: Deathwatch Season 1",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQDy03rgYPk2rrOKMI18KZU3l32V9fPcnzcqrVOZuiv3nHH36-WrbLtHtFXpDqmi6crAqj9",
+      rating: "8.7",
+      year: "2025",
+      description: "Based on the legendary video game franchise, this Netflix original series follows elite operative Sam Fisher as he navigates a world of shadows, high-tech gadgets, and deadly conspiracies. Complete Season 1 available in premium Netflix WEB-DL quality with Dual Audio."
+    },
+    {
+      id: 38,
+      title: "Gen V S02E07 - Hell Week",
+      imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzwSBfxxHGySUWXuRNH1MJ4-UX971SBEnF7dRVmtQ9WbwlOmYY",
+      rating: "8.3",
+      year: "2025",
+      description: "In Hell Week, the seventh episode of Gen V's second season, the stakes reach new heights at Godolkin University. As the pressure mounts during the intense Hell Week trials, our young heroes face their most challenging tests yet in this explosive superhero drama."
+    },
     {
       id: 37,
       title: "Saiyaara",
@@ -237,6 +255,14 @@ const movieData = {
   ],
   action: [
     {
+      id: 39,
+      title: "Splinter Cell: Deathwatch Season 1",
+      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQDy03rgYPk2rrOKMI18KZU3l32V9fPcnzcqrVOZuiv3nHH36-WrbLtHtFXpDqmi6crAqj9",
+      rating: "8.7",
+      year: "2025",
+      description: "Based on the legendary video game franchise, this Netflix original series follows elite operative Sam Fisher as he navigates a world of shadows, high-tech gadgets, and deadly conspiracies. Complete Season 1 available in premium Netflix WEB-DL quality with Dual Audio."
+    },
+    {
       id: 32,
       title: "KPop Demon Hunters Sing-Along",
       imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiQPAU0vExAsL_LLn1IejwD-e4TNAGB-952JTZ000HZ-lfNKOh",
@@ -398,6 +424,14 @@ const movieData = {
     }
   ],
   drama: [
+    {
+      id: 38,
+      title: "Gen V S02E07 - Hell Week",
+      imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzwSBfxxHGySUWXuRNH1MJ4-UX971SBEnF7dRVmtQ9WbwlOmYY",
+      rating: "8.3",
+      year: "2025",
+      description: "In Hell Week, the seventh episode of Gen V's second season, the stakes reach new heights at Godolkin University. As the pressure mounts during the intense Hell Week trials, our young heroes face their most challenging tests yet in this explosive superhero drama."
+    },
     {
       id: 36,
       title: "The Girlfriend",
@@ -653,6 +687,12 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'weapons';
     } else if (urlTitle.includes('the girlfriend')) {
       urlTitle = 'the-girlfriend';
+    } else if (urlTitle.includes('saiyaara')) {
+      urlTitle = 'saiyaara';
+    } else if (urlTitle.includes('gen v s02e07') || urlTitle.includes('gen.v.s02e07')) {
+      urlTitle = 'gen-v-s02e07';
+    } else if (urlTitle.includes('splinter cell') || urlTitle.includes('deathwatch')) {
+      urlTitle = 'splinter-cell-deathwatch';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -914,6 +954,8 @@ function App() {
         <Route path="/movies/weapons" element={<WeaponsPost />} />
         <Route path="/movies/the-girlfriend" element={<TheGirlfriendPost />} />
         <Route path="/movies/saiyaara" element={<SaiyaaraPost />} />
+        <Route path="/movies/gen-v-s02e07" element={<GenVS2E7Post />} />
+        <Route path="/movies/splinter-cell-deathwatch" element={<SplinterCellDeathwatchPost />} />
       </Routes>      <Footer />
     </div>
   );

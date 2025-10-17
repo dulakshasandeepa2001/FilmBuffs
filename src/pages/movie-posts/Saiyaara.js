@@ -72,27 +72,21 @@ const SaiyaaraPost = () => {
                 rel="noopener noreferrer"
                 className="trailer-btn"
               >
-                🎬 Watch Trailer
+                Watch Trailer
               </a>
             </div>
             <div className="download-buttons">
-              {clickCount < requiredClicks ? (
-                <button onClick={handleDownloadClick} className="main-download-btn">
-                  📥 Click to Download
-                </button>
-              ) : (
-                <button onClick={() => setShowDownloadOptions(true)} className="main-download-btn">
-                  📥 Show Download Options
-                </button>
-              )}
+              <button onClick={handleDownloadClick} className="main-download-btn click-to-download">
+                ⬇ Click to Download
+              </button>
               <div className="download-info">
                 <p>Click the download button to access download options!</p>
-                <p>1080p and 720p quality available</p>
-                <p>10Bit quality with excellent picture quality</p>
+                <p>Help and 720p quality available</p>
+                <p>Both quality with excellent picture quality</p>
                 <p>All downloads available instantly - no waiting!</p>
               </div>
             </div>
-            {showDownloadOptions && clickCount >= requiredClicks && (
+            {(clickCount >= requiredClicks || showDownloadOptions) && (
               <div className="download-options">
                 <h2>Select Quality & Format</h2>
                 <div className="quality-section">
