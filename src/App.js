@@ -40,7 +40,7 @@ import TogetherPost from './pages/movie-posts/Together';
 import GenVS2E7Post from './pages/movie-posts/GenVS2E7';
 import SplinterCellDeathwatchPost from './pages/movie-posts/SplinterCellDeathwatch';
 
-// Removed redirect links functionality completely
+
 
 // Updated movie data with specific movies for each category
 const movieData = {
