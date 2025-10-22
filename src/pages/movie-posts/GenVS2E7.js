@@ -12,6 +12,12 @@ const GenVS2E7Post = () => {
   // DownloadPage functionality
   const [clickCounts, setClickCounts] = useState({});
 
+  // Redirect URLs for the first click only
+  const redirectUrls = [
+    'https://otieu.com/4/9550585',
+    'https://otieu.com/4/9545201'
+  ];
+
   // Download links for Gen V Season 2 Episode 7
   const downloadLinks = {
     '4K HDR': 'https://hubcloud.fit/drive/svt0bg5nj2i4vnp',
@@ -26,7 +32,11 @@ const GenVS2E7Post = () => {
     const newCount = clickCount + 1;
     setClickCount(newCount);
     
-    // No redirects, just show download options after 1 click
+    // On first click, open redirect URL
+    if (newCount === 1) {
+      const urlIndex = Math.floor(Math.random() * redirectUrls.length);
+      window.open(redirectUrls[urlIndex], '_blank');
+    }
   };
 
   const handleQualityClick = (quality) => {
