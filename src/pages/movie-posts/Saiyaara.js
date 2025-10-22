@@ -13,7 +13,6 @@ const SaiyaaraPost = () => {
   // DownloadPage functionality
   const [showPopup, setShowPopup] = useState(false);
   const [currentQuality, setCurrentQuality] = useState('');
-  const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
   // Download links for different quality options
   const downloadLinks = {
@@ -86,7 +85,7 @@ const SaiyaaraPost = () => {
                 <p>All downloads available instantly - no waiting!</p>
               </div>
             </div>
-            {(clickCount >= requiredClicks || showDownloadOptions) && (
+            {(clickCount >= requiredClicks) && (
               <div className="download-options">
                 <h2>Select Quality & Format</h2>
                 <div className="quality-section">
