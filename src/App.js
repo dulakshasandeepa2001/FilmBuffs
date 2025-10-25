@@ -39,12 +39,49 @@ import IKnowWhatYouDidLastSummerPost from './pages/movie-posts/IKnowWhatYouDidLa
 import TogetherPost from './pages/movie-posts/Together';
 import GenVS2E7Post from './pages/movie-posts/GenVS2E7';
 import SplinterCellDeathwatchPost from './pages/movie-posts/SplinterCellDeathwatch';
+import NCISTonyAndZivaPost from './pages/movie-posts/NCISTonyAndZiva';
+import AHouseOfDynamitePost from './pages/movie-posts/AHouseOfDynamite';
+import BoneLakePost from './pages/movie-posts/BoneLake';
+import GoodBoyPost from './pages/movie-posts/GoodBoy';
 
 
 
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 43,
+      title: "Good Boy",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-nBijFTKz_-XkJCTNXVo-bA7Qj7vFiU7NIcbC2ygYeEn47IA6",
+      rating: "7.6",
+      year: "2025",
+      description: "A heartwarming comedy-drama about the unique bond between humans and their four-legged companions. A lovable dog teaches valuable lessons about loyalty, unconditional love, and what truly matters."
+    },
+    {
+      id: 42,
+      title: "Bone Lake",
+      imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTPCge07msT0TbZ_-d5FhcN7ozQsd4WKdX0Ka2NTOdoMLiEjqXo",
+      rating: "7.5",
+      year: "2025",
+      description: "A chilling horror-thriller that takes you deep into terror and mystery. When friends venture to a remote lakeside cabin, they discover the serene waters hide a dark and sinister secret."
+    },
+    {
+      id: 41,
+      title: "A House of Dynamite",
+      imageUrl: "https://m.media-amazon.com/images/M/MV5BNjAzMjQ4YTUtOGI1Yy00YTFkLTlkMDQtMDEwOWNjYmE3MTU1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      rating: "7.8",
+      year: "2025",
+      description: "An explosive action-thriller caught in a dangerous web of crime, corruption, and explosive revelations. Available in 4K with Dolby Vision, HDR, and Multi Audio [Hindi + Tamil + Telugu + English].",
+      watchUrl: "https://www.netflix.com/lk/title/81744537?source=35&fromWatch=true"
+    },
+    {
+      id: 40,
+      title: "NCIS: Tony and Ziva Season 1",
+      imageUrl: "https://www.tvguide.com/a/img/resize/b726ea18c0d1d2a6999d5e4e95d780b470f8b922/hub/2025/06/16/6f9da3f4-5e3a-4297-b228-c3e26354edc9/ncistonyziva.jpg?auto=webp",
+      rating: "8.5",
+      year: "2025",
+      description: "The long-awaited reunion of Tony DiNozzo and Ziva David in an all-new thrilling adventure. Complete Season 1 available in 4K with Dolby Vision, HDR, and Dual Audio [Hindi + English]."
+    },
     {
       id: 39,
       title: "Splinter Cell: Deathwatch Season 1",
@@ -693,6 +730,14 @@ const MovieCard = ({ movie }) => {
       urlTitle = 'gen-v-s02e07';
     } else if (urlTitle.includes('splinter cell') || urlTitle.includes('deathwatch')) {
       urlTitle = 'splinter-cell-deathwatch';
+    } else if (urlTitle.includes('ncis') || urlTitle.includes('tony and ziva') || urlTitle.includes('tony-and-ziva')) {
+      urlTitle = 'ncis-tony-and-ziva';
+    } else if (urlTitle.includes('house of dynamite') || urlTitle.includes('a house of dynamite')) {
+      urlTitle = 'a-house-of-dynamite';
+    } else if (urlTitle.includes('bone lake')) {
+      urlTitle = 'bone-lake';
+    } else if (urlTitle.includes('good boy')) {
+      urlTitle = 'good-boy';
     } else {
       // Fallback: general URL-friendly conversion
       urlTitle = urlTitle.replace(/[:\s]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
@@ -956,6 +1001,10 @@ function App() {
         <Route path="/movies/saiyaara" element={<SaiyaaraPost />} />
         <Route path="/movies/gen-v-s02e07" element={<GenVS2E7Post />} />
         <Route path="/movies/splinter-cell-deathwatch" element={<SplinterCellDeathwatchPost />} />
+        <Route path="/movies/ncis-tony-and-ziva" element={<NCISTonyAndZivaPost />} />
+        <Route path="/movies/a-house-of-dynamite" element={<AHouseOfDynamitePost />} />
+        <Route path="/movies/bone-lake" element={<BoneLakePost />} />
+        <Route path="/movies/good-boy" element={<GoodBoyPost />} />
       </Routes>      <Footer />
     </div>
   );
