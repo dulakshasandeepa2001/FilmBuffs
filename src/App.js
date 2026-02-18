@@ -390,7 +390,7 @@ const movieData = {
     {
       id: 45,
       title: "Ghost Train",
-      imageUrl: "https://via.placeholder.com/600x900?text=Ghost+Train",
+      imageUrl: "https://img2.beritasatu.com/cache/jakartaglobe/960x620-w/2025/07/1753444859-1673x2461.webp",
       rating: "7.4",
       year: "2025",
       description: "Supernatural horror aboard a night train where escape isn’t an option."
@@ -490,7 +490,7 @@ const movieData = {
     {
       id: 44,
       title: "No Other Choice",
-      imageUrl: "https://via.placeholder.com/600x900?text=No+Other+Choice",
+      imageUrl: "https://resizing.flixster.com/jmx4yLi00DEubbDPQoxemNRqPsc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2MyMzQ4M2M5LWEzMTUtNDA4NC05OGMyLTVhYjMxNTE0ZjhhNi5qcGc=",
       rating: "7.9",
       year: "2025",
       description: "Character-driven drama with thriller stakes. A gripping look at ethics under pressure and the consequences of ambition."
