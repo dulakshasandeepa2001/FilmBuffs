@@ -59,7 +59,12 @@ const MoviePostTemplate = ({ movieData }) => {
         {/* Hero Section */}
         <div className="movie-hero-section">
           <img 
-            src={movieData.imageUrl} 
+            src={(function(url, version){
+              if(!url) return '';
+              if(!version) return url;
+              const sep = url.includes('?') ? '&' : '?';
+              return `${url}${sep}v=${version}`;
+            })(movieData.imageUrl, movieData.imageVersion)} 
             alt={movieData.title} 
             className="movie-banner-image"
           />

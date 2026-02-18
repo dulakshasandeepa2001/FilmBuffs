@@ -7,6 +7,7 @@ const NCISTonyAndZivaPost = () => {
     title: "NCIS: Tony and Ziva - Season 1",
     pageTitle: "NCIS Tony and Ziva Season 1 (2025) Download | Film Buffs",
     imageUrl: "https://www.tvguide.com/a/img/resize/b726ea18c0d1d2a6999d5e4e95d780b470f8b922/hub/2025/06/16/6f9da3f4-5e3a-4297-b228-c3e26354edc9/ncistonyziva.jpg?auto=webp",
+    imageVersion: "20260218",
     rating: "8.5",
     year: "2025",
     genres: ["Action", "Drama", "Crime"],

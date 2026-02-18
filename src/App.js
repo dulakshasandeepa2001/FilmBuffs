@@ -43,12 +43,30 @@ import NCISTonyAndZivaPost from './pages/movie-posts/NCISTonyAndZiva';
 import AHouseOfDynamitePost from './pages/movie-posts/AHouseOfDynamite';
 import BoneLakePost from './pages/movie-posts/BoneLake';
 import GoodBoyPost from './pages/movie-posts/GoodBoy';
+import NoOtherChoicePost from './pages/movie-posts/NoOtherChoice';
+import GhostTrainPost from './pages/movie-posts/GhostTrain';
 
 
 
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 44,
+      title: "No Other Choice",
+      imageUrl: "https://resizing.flixster.com/jmx4yLi00DEubbDPQoxemNRqPsc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2MyMzQ4M2M5LWEzMTUtNDA4NC05OGMyLTVhYjMxNTE0ZjhhNi5qcGc=",
+      rating: "7.9",
+      year: "2025",
+      description: "A tense drama-thriller where every decision carries consequences. As a rising professional faces an explosive scandal, the dominoes fall and the choices narrow—until there’s no other choice."
+    },
+    {
+      id: 45,
+      title: "Ghost Train",
+      imageUrl: "https://img2.beritasatu.com/cache/jakartaglobe/960x620-w/2025/07/1753444859-1673x2461.webp",
+      rating: "7.4",
+      year: "2025",
+      description: "A claustrophobic horror-thriller set on the last train of the night. Ghostly hands press through windows as a sinister presence stalks the carriage."
+    },
     {
       id: 43,
       title: "Good Boy",
@@ -370,6 +388,14 @@ const movieData = {
   ],
   horror: [
     {
+      id: 45,
+      title: "Ghost Train",
+      imageUrl: "https://via.placeholder.com/600x900?text=Ghost+Train",
+      rating: "7.4",
+      year: "2025",
+      description: "Supernatural horror aboard a night train where escape isn’t an option."
+    },
+    {
       id: 35,
       title: "Weapons",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-FkFMeOIyaH7KEDXFhc3p8itdq1EZGDKYmWhwC0iry-Ka3Pr",
@@ -461,6 +487,14 @@ const movieData = {
     }
   ],
   drama: [
+    {
+      id: 44,
+      title: "No Other Choice",
+      imageUrl: "https://via.placeholder.com/600x900?text=No+Other+Choice",
+      rating: "7.9",
+      year: "2025",
+      description: "Character-driven drama with thriller stakes. A gripping look at ethics under pressure and the consequences of ambition."
+    },
     {
       id: 38,
       title: "Gen V S02E07 - Hell Week",
@@ -1005,6 +1039,8 @@ function App() {
         <Route path="/movies/a-house-of-dynamite" element={<AHouseOfDynamitePost />} />
         <Route path="/movies/bone-lake" element={<BoneLakePost />} />
         <Route path="/movies/good-boy" element={<GoodBoyPost />} />
+        <Route path="/movies/no-other-choice" element={<NoOtherChoicePost />} />
+        <Route path="/movies/ghost-train" element={<GhostTrainPost />} />
       </Routes>      <Footer />
     </div>
   );
