@@ -45,12 +45,31 @@ import BoneLakePost from './pages/movie-posts/BoneLake';
 import GoodBoyPost from './pages/movie-posts/GoodBoy';
 import NoOtherChoicePost from './pages/movie-posts/NoOtherChoice';
 import GhostTrainPost from './pages/movie-posts/GhostTrain';
-
+import TheWhistlerPost from './pages/movie-posts/TheWhistler';
+import BallisticPost from './pages/movie-posts/Ballistic';
 
 
 // Updated movie data with specific movies for each category
 const movieData = {
   latest: [
+    {
+      id: 47,
+      title: "Ballistic",
+      imageUrl: "https://images.fandango.com/ImageRenderer/500/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/245426/ballistic.jpg",
+      rating: "7.8",
+      year: "2026",
+      description: "Ballistic is an intense action-thriller with high-octane sequences. Stream or download Ballistic (2026) in stunning HD quality. Available in 1080p (5.1 GB) and 720p (1.88 GB) with English E-AC-3 6ch audio.",
+      watchUrl: "/movies/ballistic"
+    },
+    {
+      id: 46,
+      title: "The Whistler",
+      imageUrl: "https://images.fandango.com/ImageRenderer/500/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/245395/TheWhistler_Web-Size_Poster_2764x4096.jpg",
+      rating: "7.7",
+      year: "2026",
+      description: "The Whistler is an upcoming thriller that delivers suspense and mystery. Stream or download The Whistler (2026) in stunning HD quality. Available in 1080p (4.34 GB) and 720p (1.96 GB) with English E-AC-3 6ch audio.",
+      watchUrl: "/movies/the-whistler"
+    },
     {
       id: 44,
       title: "No Other Choice",
@@ -310,6 +329,14 @@ const movieData = {
   ],
   action: [
     {
+      id: 47,
+      title: "Ballistic",
+      imageUrl: "https://images.fandango.com/ImageRenderer/500/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/245426/ballistic.jpg",
+      rating: "7.8",
+      year: "2026",
+      description: "Ballistic is an intense action-thriller with high-octane sequences and explosive confrontations. Available in 1080p (5.1 GB) and 720p (1.88 GB)."
+    },
+    {
       id: 39,
       title: "Splinter Cell: Deathwatch Season 1",
       imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQDy03rgYPk2rrOKMI18KZU3l32V9fPcnzcqrVOZuiv3nHH36-WrbLtHtFXpDqmi6crAqj9",
@@ -562,6 +589,14 @@ const movieData = {
     }
   ],
   thriller: [
+    {
+      id: 46,
+      title: "The Whistler",
+      imageUrl: "https://images.fandango.com/ImageRenderer/500/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/245395/TheWhistler_Web-Size_Poster_2764x4096.jpg",
+      rating: "7.7",
+      year: "2026",
+      description: "The Whistler is an upcoming thriller that delivers suspense and mystery. Available in 1080p (4.34 GB) and 720p (1.96 GB)."
+    },
     {
       id: 11,
       title: "Saltburn",
@@ -1041,6 +1076,8 @@ function App() {
         <Route path="/movies/good-boy" element={<GoodBoyPost />} />
         <Route path="/movies/no-other-choice" element={<NoOtherChoicePost />} />
         <Route path="/movies/ghost-train" element={<GhostTrainPost />} />
+        <Route path="/movies/the-whistler" element={<TheWhistlerPost />} />
+        <Route path="/movies/ballistic" element={<BallisticPost />} />
       </Routes>      <Footer />
     </div>
   );
