@@ -47,7 +47,220 @@ import NoOtherChoicePost from './pages/movie-posts/NoOtherChoice';
 import GhostTrainPost from './pages/movie-posts/GhostTrain';
 import TheWhistlerPost from './pages/movie-posts/TheWhistler';
 import BallisticPost from './pages/movie-posts/Ballistic';
+import News from './components/News';
+import NewsDetails from './components/NewsDetails';
 
+
+// Movie-related news data
+const newsData = [
+  {
+    id: 1,
+    title: "Superman 2025: First Official Trailer Reveals Stunning New Suit Design",
+    excerpt: "The highly anticipated Superman reboot showcases an entirely new suit design for the Man of Steel. Fans are thrilled with the sleek and modern approach to the iconic costume. The trailer has already garnered over 50 million views worldwide.",
+    category: "Movie Trailers",
+    author: "Entertainment Weekly",
+    date: "2 hours ago",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPfYWUBZ_LxH0n5eZKrK2W0i-8DxGj98oLCXJQRz7lzjHaZk",
+    details: [
+      {
+        title: "New Suit Design Elements",
+        content: "The new Superman suit combines classic elements with modern aesthetics. It features enhanced durability technology, a more streamlined silhouette, and revolutionary materials that make it appear lighter and more dynamic than ever before."
+      },
+      {
+        title: "Cast and Director",
+        content: "The film stars as the new Superman with acclaimed director James Gunn at the helm. This fresh take promises to bring a new perspective to the iconic character while honoring the legacy of previous iterations."
+      },
+      {
+        title: "Release and Reception",
+        content: "Expected to release in summer 2025, the trailer has already broken streaming records with 50+ million views. Fan reactions on social media have been overwhelmingly positive, with particular praise for the suit design and visual effects."
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Dune: Part Three Officially Greenlit by Warner Bros",
+    excerpt: "Following the massive success of Dune: Part Two, Warner Bros has officially approved the production of Dune: Part Three. Director Denis Villeneuve is set to return for the epic conclusion of Paul Atreides' journey across the desert planet.",
+    category: "Breaking News",
+    author: "Deadline",
+    date: "4 hours ago",
+    imageUrl: "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    details: [
+      {
+        title: "Production Timeline",
+        content: "Pre-production is set to begin in Q3 2026, with principal photography scheduled to start in early 2027. The film is expected to release in late 2029, completing the trilogy with a grand cinematic conclusion."
+      },
+      {
+        title: "Story Direction",
+        content: "Part Three will adapt the final sections of Frank Herbert's original novel, focusing on Paul's reign as emperor and the inevitable conflicts that arise. The narrative promises deeper exploration of the themes of power, prophecy, and destiny."
+      },
+      {
+        title: "Scale and Ambition",
+        content: "Denis Villeneuve has confirmed that Part Three will be the most ambitious installment yet, featuring expanded scope, new locations on Arrakis, and groundbreaking visual effects that push the boundaries of cinema technology."
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: "How to Train Your Dragon Live-Action: Cast Announcement and Behind-the-Scenes",
+    excerpt: "The live-action adaptation of How to Train Your Dragon has announced its main cast. The production team shared exclusive behind-the-scenes footage showing the incredible practical effects and dragon design process for the upcoming film.",
+    category: "Production Updates",
+    author: "Variety",
+    date: "6 hours ago",
+    imageUrl: "https://res.cloudinary.com/dib0fble7/image/upload/v1752688734/Untitled12222_fkn050.webp",
+    details: [
+      {
+        title: "Main Cast Revealed",
+        content: "The lead role of Hiccup has been cast with an acclaimed young actor known for dramatic performances. Supporting cast includes veteran actors for Stoick and other key Viking characters, bringing depth and gravitas to the adaptation."
+      },
+      {
+        title: "Dragon Design and Effects",
+        content: "The production revealed revolutionary dragon design processes combining motion-capture technology with practical animatronics. Each dragon species has been meticulously crafted to be both visually stunning and believable within a live-action world."
+      },
+      {
+        title: "Viking World Building",
+        content: "Behind-the-scenes footage showcases extensive set construction of Berk, the Viking village. Production designers have created a fully realized world that balances the fantastical elements of dragons with grounded Viking architecture and culture."
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: "Oppenheimer Breaks Box Office Records at International Markets",
+    excerpt: "Christopher Nolan's acclaimed film Oppenheimer continues to dominate global box offices, becoming the highest-grossing biographical drama of all time. The film has resonated with audiences across 87 countries.",
+    category: "Box Office",
+    author: "Hollywood Reporter",
+    date: "8 hours ago",
+    imageUrl: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    details: [
+      {
+        title: "Box Office Milestones",
+        content: "Oppenheimer has earned over $1.2 billion globally, surpassing all previous biographical dramas. The film topped the international box office in 47 countries and continues to attract audiences weeks after its initial release."
+      },
+      {
+        title: "Critical Acclaim",
+        content: "The film has maintained a high critical score across major review aggregators and has been selected as a strong contender for major awards season. Critics praise the cinematography, narrative structure, and powerful performances throughout the film."
+      },
+      {
+        title: "Cultural Impact",
+        content: "Oppenheimer has sparked renewed interest in World War II history and atomic physics. Universities report increased enrollment in physics departments, and the film has become a cultural touchstone for discussions about scientific responsibility and ethics."
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: "Barbie Movie Wins Best Comedy at International Film Awards",
+    excerpt: "Greta Gerwig's Barbie has taken home the Best Comedy award at the prestigious International Film Awards. The film also won for Best Costumes and Best Original Score, celebrating its massive cultural impact.",
+    category: "Awards",
+    author: "Variety",
+    date: "1 day ago",
+    imageUrl: "https://image.tmdb.org/t/p/w500/nM4gtwMNQYxHzxdCTXKJbS6SggS.jpg",
+    details: [
+      {
+        title: "Awards Won",
+        content: "Barbie swept the awards ceremony, winning Best Comedy, Best Costumes, Best Original Score, and Best Production Design. The film's achievements represent recognition of Greta Gerwig's bold directorial vision and the film's cultural relevance."
+      },
+      {
+        title: "Director and Cast Recognition",
+        content: "Margot Robbie's performance as Barbie and Ryan Gosling's unexpected comedic turn as Ken received special recognition. Greta Gerwig became the first female director to win Best Comedy, marking a significant milestone in industry representation."
+      },
+      {
+        title: "Cultural Phenomenon",
+        content: "The Barbie movie sparked a global cultural movement, with 'Barbie pink' becoming a fashion trend and the film influencing conversations about feminism, nostalgia, and consumer culture. The success has reinvigorated interest in the original Mattel doll brand."
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: "Mission Impossible: Final Reckoning - Director Reveals Action Sequence Details",
+    excerpt: "Director Christopher McQuarrie has revealed the ambitious action sequences planned for Mission Impossible: The Final Reckoning. Tom Cruise is set to perform more death-defying stunts, including a skyscraper BASE jump never attempted before.",
+    category: "Behind the Scenes",
+    author: "Empire Magazine",
+    date: "1 day ago",
+    imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcShcMw2wUx24KAWkT-eQaC8bCB5EzkApaInrKpXeGm_UM8HcBlN",
+    details: [
+      {
+        title: "Gravity-Defying Stunts",
+        content: "Tom Cruise will perform a record-breaking BASE jump from a 5,000-foot cliff in a single take. The stunt was choreographed over two years with military specialists and has been approved by international stunt coordinators as the most ambitious skyscraper jump ever filmed."
+      },
+      {
+        title: "Story Arc Conclusion",
+        content: "This final installment brings closure to Ethan Hunt's story arc, featuring emotional depth alongside the franchise's signature action. McQuarrie promises a blend of intimate character moments and explosive set pieces that will satisfy both longtime fans and newcomers."
+      },
+      {
+        title: "International Locations",
+        content: "Filming takes place across six continents, with major action sequences shot in practical locations without green screen. The production showcases breathtaking scenery from Iceland to the streets of Dubai, creating a visually stunning swan song for the franchise."
+      }
+    ]
+  },
+  {
+    id: 7,
+    title: "Squid Game Season 3: Finale Sets New Netflix Streaming Record",
+    excerpt: "The highly anticipated final season of Squid Game has shattered all Netflix records, becoming the most-watched season of the series. The finale kept viewers on the edge of their seats with shocking plot twists and character revelations.",
+    category: "Streaming",
+    author: "Netflix Official Blog",
+    date: "2 days ago",
+    imageUrl: "https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
+    details: [
+      {
+        title: "Viewership Records",
+        content: "Squid Game Season 3 reached 900 million hours watched in its first week, breaking the platform's all-time record. The finale episode was watched by over 500 million accounts, making it the most-watched single episode in Netflix history."
+      },
+      {
+        title: "Story Conclusion",
+        content: "The season provides definitive endings to major character arcs while leaving room for thematic reflection. Viewer satisfaction scores indicate that the finale successfully balanced emotional depth with the show's signature high-stakes drama."
+      },
+      {
+        title: "Global Cultural Impact",
+        content: "The series finale sparked global conversations about class inequality, human nature, and morality. Social media was dominated by fan theories and discussions, with the show trending in 195 countries simultaneously."
+      }
+    ]
+  },
+  {
+    id: 8,
+    title: "The Batman Director Matt Reeves Hints at Batman Returns: The Sequel",
+    excerpt: "Matt Reeves has teased that The Batman sequel is already in development. The director hinted at a darker, more intricate mystery thriller storyline for the next installment of the Dark Knight's adventures.",
+    category: "Upcoming Projects",
+    author: "The Hollywood Reporter",
+    date: "2 days ago",
+    imageUrl: "https://image.tmdb.org/t/p/w500/oJscIwyhjqmAwiaY89GBWnRHy5J.jpg",
+    details: [
+      {
+        title: "Sequel Development Status",
+        content: "The sequel is in active development with Matt Reeves returning as director and writer. Production is expected to begin in 2027, with a targeted release date of 2029, allowing ample time for script refinement and pre-production planning."
+      },
+      {
+        title: "Story Direction",
+        content: "The sequel will explore a more intricate mystery that challenges Batman's detective skills at the highest level. Reeves hints at introducing iconic villains and expanding the detective noir elements that made the first film successful."
+      },
+      {
+        title: "Cast and Tone",
+        content: "Robert Pattinson is confirmed to return as Bruce Wayne/Batman. The tone will maintain the dark, grounded aesthetic of the first film while deepening character development and expanding Gotham's criminal underworld mythology."
+      }
+    ]
+  },
+  {
+    id: 9,
+    title: "M3GAN 2: Artificial Intelligence Thriller Gets Greenlit",
+    excerpt: "Following the success of M3GAN, the studio has approved the production of M3GAN 2. The sequel will explore more advanced AI technology and new ethical dilemmas. The script is already in development with returning star Allison Williams.",
+    category: "Movie News",
+    author: "Deadline",
+    date: "3 days ago",
+    imageUrl: "https://image.tmdb.org/t/p/w500/87kMmFsEGl3e1agVoPIr3BzBLJh.jpg",
+    details: [
+      {
+        title: "Sequel Concept",
+        content: "M3GAN 2 will introduce more advanced AI iterations and explore the global implications of artificial intelligence becoming mainstream. The story expands beyond a single family to examine society-wide consequences of unchecked AI development."
+      },
+      {
+        title: "Cast and Production",
+        content: "Allison Williams returns in a lead role, with acclaimed director James McTeigue set to direct the sequel. The budget has increased significantly to support more sophisticated visual effects and expanded scope of the story."
+      },
+      {
+        title: "Thematic Expansion",
+        content: "Beyond the thriller elements, M3GAN 2 will tackle deeper philosophical questions about consciousness, free will, and humanity's relationship with technology. The film aims to balance entertainment with thought-provoking commentary on AI ethics and responsibility."
+      }
+    ]
+  }
+];
 
 // Updated movie data with specific movies for each category
 const movieData = {
@@ -954,6 +1167,7 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li><Link to="/" onClick={handleFooterClick}>Home</Link></li>
+            <li><Link to="/news" onClick={handleFooterClick}>News</Link></li>
             <li><Link to="/action" onClick={handleFooterClick}>Action</Link></li>
             <li><Link to="/thriller" onClick={handleFooterClick}>Thriller</Link></li>
             <li><Link to="/horror" onClick={handleFooterClick}>Horror</Link></li>
@@ -1012,6 +1226,7 @@ function App() {
         <Link to="/" className="logo" onClick={handleLogoClick}>Film Buffs</Link>
         <div className="nav-links">
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={handleNavClick}>Home</Link>
+          <Link to="/news" className={`nav-link ${location.pathname === '/news' ? 'active' : ''}`} onClick={handleNavClick}>News</Link>
           <Link to="/action" className={`nav-link ${location.pathname === '/action' ? 'active' : ''}`} onClick={handleNavClick}>Action</Link>
           <Link to="/thriller" className={`nav-link ${location.pathname === '/thriller' ? 'active' : ''}`} onClick={handleNavClick}>Thriller</Link>
           <Link to="/scifi" className={`nav-link ${location.pathname === '/scifi' ? 'active' : ''}`} onClick={handleNavClick}>Sci-Fi</Link>
@@ -1024,6 +1239,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Page title="Latest Releases" movies={movieData.latest} />} />
+        <Route path="/news" element={<News newsData={newsData} />} />
+        <Route path="/news/:id" element={<NewsDetails newsData={newsData} />} />
         <Route path="/action" element={<Page title="Action Movies" movies={movieData.action} />} />
         <Route path="/horror" element={<Page title="Horror Movies" movies={movieData.horror} />} />
         <Route path="/comedy" element={<Page title="Comedy Movies" movies={movieData.comedy} />} />
