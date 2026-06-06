@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './News.css';
 
 const NewsCard = ({ news }) => {
   const navigate = useNavigate();
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleCardClick = () => {
     navigate(`/news/${news.id}`);
@@ -14,8 +13,6 @@ const NewsCard = ({ news }) => {
     <div 
       className="news-card"
       onClick={handleCardClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="news-image-container">
         <img src={news.imageUrl} alt={news.title} className="news-image" />
